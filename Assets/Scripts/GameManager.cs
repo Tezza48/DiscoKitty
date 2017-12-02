@@ -4,20 +4,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UObject = UnityEngine.Object;
 
-[RequireComponent(typeof(Collider2D)), RequireComponent(typeof(SpriteRenderer))]
+[RequireComponent(typeof(Collider2D))]
 public class GameManager : MonoBehaviour
 {
 
     [Header("Component Referances")]
     public Collider2D mCollider;
     public SpriteRenderer mRenderer;
-    public Repulsive mWinRepulsive;
+    //public Repulsive mWinRepulsive;
 
     [Header("Zone Artwork")]
-    public Sprite incomplete, complete;
-
-    public bool areAllInside = false;
+    public Sprite spriteIncomplete;
+    public Sprite spriteComplete;
 
     [Header("UI Elements")]
     public Text howmanyInText, currentHoldTimeText;
@@ -26,12 +26,16 @@ public class GameManager : MonoBehaviour
     [Tooltip("Time to keep all cats in to win")]
     public float holdTime = 3;
 
+    [Header("Level Stuff")]
+    public string nextLevel;
+
+    private bool areAllInside = false;
     private float tTimerCurrentHold;
 
     // Use this for initialization
     void Start()
     {
-        mWinRepulsive.enabled = false;
+        tTimerCurrentHold = Time.time + holdTime;
     }
 
     // Update is called once per frame
@@ -55,7 +59,7 @@ public class GameManager : MonoBehaviour
 
         howmanyInText.text = "Cats in: " + howmanyin + "/" + Repulsive.SpawnedRepulsives.Count; 
 
-        mRenderer.sprite = areAllInside ? complete : incomplete;
+        mRenderer.sprite = areAllInside ? spriteComplete : spriteIncomplete;
 
         if (areAllInside)
         {
@@ -76,12 +80,13 @@ public class GameManager : MonoBehaviour
 
     private void LevelComplete()
     {
-        mWinRepulsive.enabled = true;
+        //mWinRepulsive.enabled = true;
         UI_WinPanel.SetActive(true);
     }
 
     public void LoadNextLevel()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex, LoadSceneMode.Single);
+        Debug.Log("Trying to load next level");
+        SceneManager.LoadScene(nextLevel, LoadSceneMode.Single);
     }
 }
