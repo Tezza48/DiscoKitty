@@ -36,9 +36,15 @@ public class Repulsive : MonoBehaviour
             sSpawnedRepulsives = new List<Repulsive>();
         }
     }
+
     private void OnEnable()
     {
         sSpawnedRepulsives.Add(this);
+    }
+
+    private void OnDisable()
+    {
+        sSpawnedRepulsives.Remove(this);
     }
 
     // Use this for initialization
@@ -56,11 +62,13 @@ public class Repulsive : MonoBehaviour
     private void FixedUpdate()
     {
         Vector2 force = new Vector2();
+        float distance = 0.0f;
         foreach (Repulsive item in sSpawnedRepulsives)
         {
             if (item != this)
             {
-                if (Vector2.Distance(transform.position, item.transform.position) < repellRange)
+                distance = Vector2.Distance(transform.position, item.transform.position);
+                if (distance < repellRange)
                 {
                     force += (Vector2)(transform.position - item.transform.position);
 
