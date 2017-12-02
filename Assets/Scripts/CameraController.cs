@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    public int min = 5, max = 50;
-    public int minBuffer = 1, maxBuffer = 10;
+    public float min = 5, max = 50;
+    public float minBuffer = 1, maxBuffer = 10;
 
     [Range(0.1f, 10.0f)]
     public float lerpSpeed = 0.5f;
@@ -22,7 +22,7 @@ public class CameraController : MonoBehaviour
     void Update()
     {
         // find furthest out cat
-        int furthest = 0;
+        float furthest = 0.0f;
         foreach (var item in Repulsive.SpawnedRepulsives)
         {
             if (item.transform.position.magnitude > furthest)
@@ -42,7 +42,7 @@ public class CameraController : MonoBehaviour
 
         // add correct buffer
         float alpha = furthest / (float)max;
-        Debug.Log(alpha);
+        //Debug.Log(alpha);
         float buffer = Mathf.Lerp(minBuffer, maxBuffer, alpha);
 
 

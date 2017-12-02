@@ -22,6 +22,11 @@ public class Repulsive : MonoBehaviour
     public Rigidbody2D mRigid;
     public Collider2D mCollider;
 
+#if UNITY_ANDROID || UNITY_IOS
+    //private bool mIsFingerDragging;
+    //private int mFingerIndex;
+
+#endif
     private ECatState catState;
 
     public static List<Repulsive> SpawnedRepulsives
@@ -98,6 +103,25 @@ public class Repulsive : MonoBehaviour
     private void OnMouseUp()
     {
         
+    }
+#endif
+
+#if UNITY_ANDROID || UNITY_IOS
+    void BeginTouchInput(Touch touch)
+    {
+
+    }
+
+    void MovedTouchInput(Touch touch)
+    {
+        Vector2 touchWorldPos = Camera.main.ScreenToWorldPoint(touch.position);
+        Debug.DrawLine(touchWorldPos, transform.position);
+        mRigid.AddForce((touchWorldPos - (Vector2)transform.position) * dragForce, ForceMode2D.Force);
+    }
+
+    void EndTouchInput(Touch touch)
+    {
+
     }
 #endif
 }
