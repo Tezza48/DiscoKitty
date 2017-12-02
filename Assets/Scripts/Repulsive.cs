@@ -83,6 +83,8 @@ public class Repulsive : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, repellRange);
     }
 
+
+#if UNITY_STANDALONE
     private void OnMouseDown()
     {
         
@@ -97,5 +99,5 @@ public class Repulsive : MonoBehaviour
     {
         
     }
-
+#endif
 }
