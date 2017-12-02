@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 771514c255bc78a49bbe63f136eb01df
-timeCreated: 1512185882
+timeCreated: 1512187818
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -12,6 +12,7 @@ TextureImporter:
     21300010: leg1
     21300012: leg3
     21300014: CircleArena
+    21300016: CatSpritesheet_0
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -210,6 +211,20 @@ TextureImporter:
         serializedVersion: 2
         x: 144
         y: 852
+        width: 131
+        height: 132
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: CatSpritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 850
         width: 131
         height: 132
       alignment: 0

@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Collider2D))]
+[RequireComponent(typeof(Collider2D)), RequireComponent(typeof(SpriteRenderer))]
 public class GameManager : MonoBehaviour
 {
 
     public Collider2D mCollider;
+    public SpriteRenderer mRenderer;
+
+    public Sprite incomplete, complete;
 
     public bool areAllInside = false;
 
@@ -33,5 +36,8 @@ public class GameManager : MonoBehaviour
             }
         }
         Debug.Log("All Are In? " + areAllInside);
+
+        mRenderer.sprite = areAllInside ? complete : incomplete;
+
     }
 }
