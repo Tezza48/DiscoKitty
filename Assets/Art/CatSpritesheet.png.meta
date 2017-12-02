@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 771514c255bc78a49bbe63f136eb01df
-timeCreated: 1512184160
+timeCreated: 1512185882
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -11,6 +11,7 @@ TextureImporter:
     21300008: leg0
     21300010: leg1
     21300012: leg3
+    21300014: CircleArena
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -199,6 +200,20 @@ TextureImporter:
         height: 4
       alignment: 3
       pivot: {x: 1, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: CircleArena
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 852
+        width: 131
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

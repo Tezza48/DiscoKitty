@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(Rigidbody2D)), RequireComponent(typeof(Collider2D))]
 public class Repulsive : MonoBehaviour
 {
     public enum ECatState
@@ -16,11 +16,18 @@ public class Repulsive : MonoBehaviour
     [Header("Settings")]
     public float repellRange = 1.0f;
     public float repellforce = 1.0f;
+    public float dragForce = 4.0f;
 
     [Header("ComponentRefs")]
     public Rigidbody2D mRigid;
+    public Collider2D mCollider;
 
     private ECatState catState;
+
+    public static List<Repulsive> SpawnedRepulsives
+    {
+        get { return sSpawnedRepulsives; } set { sSpawnedRepulsives = value; }
+    }
 
     private void Awake()
     {
@@ -76,7 +83,7 @@ public class Repulsive : MonoBehaviour
     {
         Vector2 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Debug.DrawLine(mouseWorldPos, transform.position);
-        mRigid.AddForce(mouseWorldPos - (Vector2)transform.position, ForceMode2D.Force);
+        mRigid.AddForce((mouseWorldPos - (Vector2)transform.position) * dragForce, ForceMode2D.Force);
     }
     private void OnMouseUp()
     {

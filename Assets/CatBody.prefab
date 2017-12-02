@@ -361,7 +361,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   repellRange: 4
   repellforce: 0.3
+  dragForce: 4
   mRigid: {fileID: 50544737916050890}
+  mCollider: {fileID: 58670053550819172}
 --- !u!212 &212077248985299796
 SpriteRenderer:
   m_ObjectHideFlags: 1
