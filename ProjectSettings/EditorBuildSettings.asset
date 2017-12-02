@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Level_C1Circle1.unity
     guid: 836196d7906b45b40acc79e66bba1d94
   - enabled: 1
-    path: Assets/Scenes/Level_C1Circle2.unity
+    path: Assets/Scenes/Level_C2Circle1.unity
     guid: 9475f7858e95d514e84553ea237440ce
   - enabled: 1
     path: Assets/Scenes/Level_C3Circle1.unity
