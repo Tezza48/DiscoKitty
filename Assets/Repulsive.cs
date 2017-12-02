@@ -2,16 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody2D))]
 public class Repulsive : MonoBehaviour
 {
+    public enum ECatState
+    {
+        Idle,
+        Dragged
+    }
 
-    public static List<Repulsive> sSpawnedRepulsives;
+    private static List<Repulsive> sSpawnedRepulsives;
 
+    [Header("Settings")]
     public float repellRange = 1.0f;
     public float repellforce = 1.0f;
 
     [Header("ComponentRefs")]
     public Rigidbody2D mRigid;
+
+    private ECatState catState;
 
     private void Awake()
     {
@@ -57,6 +66,21 @@ public class Repulsive : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         Gizmos.DrawWireSphere(transform.position, repellRange);
+    }
+
+    private void OnMouseDown()
+    {
+        
+    }
+    private void OnMouseDrag()
+    {
+        Vector2 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Debug.DrawLine(mouseWorldPos, transform.position);
+        mRigid.AddForce(mouseWorldPos - (Vector2)transform.position, ForceMode2D.Force);
+    }
+    private void OnMouseUp()
+    {
+        
     }
 
 }
