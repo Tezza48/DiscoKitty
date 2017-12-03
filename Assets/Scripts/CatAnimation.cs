@@ -5,7 +5,7 @@ using UnityEngine;
 [ExecuteInEditMode]
 public class CatAnimation : MonoBehaviour
 {
-    //[Range(0.0f, 10.0f)]
+    [Range(0.0f, 10.0f)]
     private float speed = 1.0f;
 
     public Rigidbody2D mRigid;
