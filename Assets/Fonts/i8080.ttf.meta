@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 90c3e5067dae6ac4eb8e1debbf140811
+timeCreated: 1512308990
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: i8080
+  fontNames:
+  - i8080
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

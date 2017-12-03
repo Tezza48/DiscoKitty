@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 222192363889754882}
   - component: {fileID: 114964645153426006}
   m_Layer: 5
-  m_Name: HoldCountdown
+  m_Name: CurrentHoldText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

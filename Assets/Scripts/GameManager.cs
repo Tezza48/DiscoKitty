@@ -10,9 +10,17 @@ using UObject = UnityEngine.Object;
 public class GameManager : MonoBehaviour
 {
 
+    public enum ELevelState
+    {
+        Idle,
+        AllIn,
+        Success,
+    }
+
     [Header("Component Referances")]
     public Collider2D mCollider;
     public SpriteRenderer mRenderer;
+    public AudioSource mAudio;
     //public Repulsive mWinRepulsive;
 
     [Header("Zone Artwork")]
@@ -20,7 +28,8 @@ public class GameManager : MonoBehaviour
     public Sprite spriteComplete;
 
     [Header("UI Elements")]
-    public Text howmanyInText, currentHoldTimeText;
+    private Text howManyInText;
+    private Text currentHoldTimeText;
     public GameObject UI_WinPanel;
 
     [Tooltip("Time to keep all cats in to win")]
@@ -29,64 +38,108 @@ public class GameManager : MonoBehaviour
     [Header("Level Stuff")]
     public string nextLevel;
 
-    private bool areAllInside = false;
+    [Header("Music")]
+    public AudioClip musVamp;
+    public AudioClip musTadaa;
+    public float musTempoIdle = 1.0f;
+    public float musTempoFinish = 2.0f;
+
+    private ELevelState levelState = ELevelState.Idle;
+    //private bool areAllInside = false;
     private float tTimerCurrentHold;
 
     // Use this for initialization
     void Start()
     {
+        mAudio.clip = musVamp;
+        mAudio.pitch = musTempoIdle;
         tTimerCurrentHold = Time.time + holdTime;
+
+        howManyInText = GameObject.Find("HowManyInText").GetComponent<Text>();
+        currentHoldTimeText = GameObject.Find("CurrentHoldText").GetComponent<Text>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        // count the number of cats inside
         int howmanyin = 0;
-        bool areAllInside = true;
+        bool allIn = true;
         // check that all repulsives are touching trigger
         foreach (Repulsive item in Repulsive.SpawnedRepulsives)
         {
             if (!item.mCollider.IsTouching(mCollider))
             {
-                areAllInside = false;
+                allIn = false;
             }
             else
             {
                 howmanyin++;
             }
         }
-        Debug.Log("All Are In? " + areAllInside);
 
-        howmanyInText.text = "Cats in: " + howmanyin + "/" + Repulsive.SpawnedRepulsives.Count; 
+        howManyInText.text = "Cats in: " + howmanyin + "/" + Repulsive.SpawnedRepulsives.Count;
 
-        mRenderer.sprite = areAllInside ? spriteComplete : spriteIncomplete;
-
-        if (areAllInside)
+        if (levelState != ELevelState.Success)
         {
-            if (Time.time > tTimerCurrentHold)
-            {
-                LevelComplete();
-            }
+            if (allIn)
+                levelState = ELevelState.AllIn;
+            else
+                levelState = ELevelState.Idle;
         }
-        else
-        {
-            tTimerCurrentHold = Time.time + holdTime;
-        }
-        
-        currentHoldTimeText.text = "Hold for: " + (tTimerCurrentHold - Time.time).ToString("N1") + " Seconds";
-        
 
+
+        switch (levelState)
+        {
+            case ELevelState.Idle:
+                tTimerCurrentHold = Time.time + holdTime;
+
+                mAudio.pitch = musTempoIdle;
+
+                currentHoldTimeText.text = "Hold for: " + (tTimerCurrentHold - Time.time).ToString("N1") + " Seconds";
+
+                //mAudio.pitch = Mathf.Lerp(mAudio.pitch, musTempoIdle, 0.001f);
+
+                mRenderer.sprite = spriteIncomplete;
+
+                break;
+            case ELevelState.AllIn:
+
+                currentHoldTimeText.text = "Hold for: " + (tTimerCurrentHold - Time.time).ToString("N1") + " Seconds";
+
+                // lerp between the two pitches using current hold time
+                mAudio.pitch = Mathf.Lerp(musTempoIdle, musTempoFinish, (holdTime - (tTimerCurrentHold - Time.time))/ holdTime);
+
+                mRenderer.sprite = spriteComplete;
+
+                if (Time.time > tTimerCurrentHold)
+                {
+                    LevelComplete();
+                }
+                break;
+            case ELevelState.Success:
+                mRenderer.sprite = spriteComplete;
+                break;
+            default:
+                break;
+        }
     }
 
     private void LevelComplete()
     {
         //mWinRepulsive.enabled = true;
         UI_WinPanel.SetActive(true);
+        levelState = ELevelState.Success;
+        mAudio.clip = musTadaa;
+        mAudio.pitch = 1.0f;
+        mAudio.loop = false;
+        mAudio.Play();
     }
 
     public void LoadNextLevel()
     {
-        Debug.Log("Trying to load next level");
+        //Debug.Log("Trying to load next level");
         SceneManager.LoadScene(nextLevel, LoadSceneMode.Single);
     }
 }

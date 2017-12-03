@@ -6,9 +6,10 @@ using UnityEngine;
 public class CatAnimation : MonoBehaviour
 {
     //[Range(0.0f, 10.0f)]
-    private float speed = 0.5f;
+    private float speed = 1.0f;
 
     public Rigidbody2D mRigid;
+    public AudioSource mAudioSource;
 
     public Transform[] legs, feet;
     public Vector2[] directions;
