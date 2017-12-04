@@ -7,7 +7,7 @@ PlayerSettings:
   productGUID: 815187fba98d68341a69e39af3c5f103
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
-  defaultScreenOrientation: 4
+  defaultScreenOrientation: 3
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
@@ -42,6 +42,8 @@ PlayerSettings:
   - logo: {fileID: 21300000, guid: 582a44f8c122db14aba6f32fb00e6a38, type: 3}
     duration: 2
   - logo: {fileID: 21300000, guid: c5c5b3d4e83bc6645898b3ed03464cbd, type: 3}
+    duration: 2
+  - logo: {fileID: 21300000, guid: 486f73a6ad7ecc548b66e42acb97dc15, type: 3}
     duration: 2
   m_VirtualRealitySplashScreen: {fileID: 0}
   m_HolographicTrackingLossScreen: {fileID: 0}
@@ -240,7 +242,8 @@ PlayerSettings:
     height: 180
     banner: {fileID: 0}
   androidGamepadSupportLevel: 0
-  resolutionDialogBanner: {fileID: 0}
+  resolutionDialogBanner: {fileID: 2800000, guid: 4f3f8bbd242a51141957a94ce31acee2,
+    type: 3}
   m_BuildTargetIcons:
   - m_BuildTarget: 
     m_Icons:
