@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UObject = UnityEngine.Object;
+using UnityEngine.Analytics;
 
 [RequireComponent(typeof(Collider2D))]
 public class GameManager : MonoBehaviour
@@ -44,6 +45,8 @@ public class GameManager : MonoBehaviour
     public float musTempoIdle = 1.0f;
     public float musTempoFinish = 2.0f;
 
+    private float levelStartTime;
+
     private ELevelState levelState = ELevelState.Idle;
     //private bool areAllInside = false;
     private float tTimerCurrentHold;
@@ -57,6 +60,8 @@ public class GameManager : MonoBehaviour
 
         howManyInText = GameObject.Find("HowManyInText").GetComponent<Text>();
         currentHoldTimeText = GameObject.Find("CurrentHoldText").GetComponent<Text>();
+
+        levelStartTime = Time.time;
 
     }
 
@@ -135,6 +140,11 @@ public class GameManager : MonoBehaviour
         mAudio.pitch = 1.0f;
         mAudio.loop = false;
         mAudio.Play();
+        Analytics.CustomEvent("levelCompleted", new Dictionary<string, object>
+        {
+            { "levelID", SceneManager.GetActiveScene().name },
+            { "playTime", Time.time - levelStartTime}
+        });
     }
 
     public void LoadNextLevel()
