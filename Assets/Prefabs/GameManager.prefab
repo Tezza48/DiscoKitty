@@ -210,7 +210,7 @@ MonoBehaviour:
   holdTime: 3
   nextLevel: Level_C2Circle1
   musVamp: {fileID: 8300000, guid: d6b7424ed08c5b341ab37cecd2dbbddd, type: 3}
-  musTadaa: {fileID: 0}
+  musTadaa: {fileID: 8300000, guid: 500627f10f554254db468c3ec5c0e25c, type: 3}
   musTempoIdle: 1
   musTempoFinish: 2
 --- !u!114 &114783513703169690
