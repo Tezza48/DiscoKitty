@@ -23,7 +23,7 @@ public class CameraController : MonoBehaviour
     {
         // find furthest out cat
         float furthest = 0.0f;
-        foreach (var item in Repulsive.SpawnedRepulsives)
+        foreach (var item in CameraTracked.GetEnabledCameraTracked())
         {
             if (item.transform.position.magnitude > furthest)
             {

@@ -6,12 +6,13 @@ public class TouchInputHelper : MonoBehaviour
 {
     private const int TOUCH_LAYER = 8;
 
+#if UNITY_ANDROID || UNITY_IOS
     private Dictionary<int, GameObject> touchMap;
-
     private void Start()
     {
         touchMap = new Dictionary<int, GameObject>();
     }
+#endif
 
     private void Update()
     {

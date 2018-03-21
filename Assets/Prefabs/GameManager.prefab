@@ -35,6 +35,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4830777133467334}
+  - component: {fileID: 114704800806354094}
   - component: {fileID: 114725987230767806}
   - component: {fileID: 58247093267661424}
   - component: {fileID: 50181236274910514}
@@ -55,7 +56,7 @@ Transform:
   m_GameObject: {fileID: 1727402676473754}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.883, y: 0.883, z: 0.883}
   m_Children: []
   m_Father: {fileID: 4830777133467334}
   m_RootOrder: 0
@@ -108,7 +109,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.6
+  m_Radius: 0.7
 --- !u!82 &82684121814831980
 AudioSource:
   m_ObjectHideFlags: 1
@@ -190,6 +191,29 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &114704800806354094
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1966267460086914}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88a5afeb26a917c44a0d8f1bf55e456f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  size: 1.4
+  artwork: {fileID: 212310991188526596}
+  collider: {fileID: 58247093267661424}
+  sizes:
+  - 3.5
+  - 10
+  scaleRanges:
+  - {x: 0.05, y: 6}
+  - {x: 0.01, y: 1.6}
+  sprites:
+  - {fileID: 21300024, guid: 771514c255bc78a49bbe63f136eb01df, type: 3}
+  - {fileID: 21300022, guid: 771514c255bc78a49bbe63f136eb01df, type: 3}
 --- !u!114 &114725987230767806
 MonoBehaviour:
   m_ObjectHideFlags: 1

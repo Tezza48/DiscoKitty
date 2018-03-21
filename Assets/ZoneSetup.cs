@@ -1,7 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
+#if UNITY_EDITOR
+using UnityEditor;
 
 [ExecuteInEditMode]
 public class ZoneSetup: MonoBehaviour
@@ -10,7 +11,7 @@ public class ZoneSetup: MonoBehaviour
     public float size = 1.0f;
 
     public SpriteRenderer artwork;
-    public CircleCollider2D collider;
+    public CircleCollider2D circleCollider;
 
     public float[] sizes;
     public Vector2[] scaleRanges;
@@ -50,7 +51,7 @@ public class ZoneSetup: MonoBehaviour
 
         artwork.transform.localScale = new Vector3(scale, scale, scale);
 
-        collider.radius = size / 2.0f;
+        circleCollider.radius = size / 2.0f;
     }
 
     // Update is called once per frame
@@ -59,3 +60,4 @@ public class ZoneSetup: MonoBehaviour
         SetupZone();
     }
 }
+#endif

@@ -28,10 +28,10 @@ public class GameManager : MonoBehaviour
     public Sprite spriteIncomplete;
     public Sprite spriteComplete;
 
-    [Header("UI Elements")]
+    //[Header("UI Elements")]
     private Text howManyInText;
     private Text currentHoldTimeText;
-    public GameObject UI_WinPanel;
+    private GameObject UI_WinPanel;
 
     [Tooltip("Time to keep all cats in to win")]
     public float holdTime = 3;
@@ -58,6 +58,12 @@ public class GameManager : MonoBehaviour
         mAudio.pitch = musTempoIdle;
         tTimerCurrentHold = Time.time + holdTime;
 
+        UI_WinPanel = GameObject.Find("Win Panel");
+        UI_WinPanel.transform.GetChild(1).GetComponent<Button>().onClick.AddListener(LoadNextLevel);
+
+        UI_WinPanel.SetActive(false);
+
+
         howManyInText = GameObject.Find("HowManyInText").GetComponent<Text>();
         currentHoldTimeText = GameObject.Find("CurrentHoldText").GetComponent<Text>();
 
@@ -68,11 +74,16 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.F12))
+        {
+            LevelComplete();
+        }
         // count the number of cats inside
         int howmanyin = 0;
         bool allIn = true;
         // check that all repulsives are touching trigger
-        foreach (Repulsive item in Repulsive.SpawnedRepulsives)
+        Cat[] cats = FindObjectsOfType<Cat>();
+        foreach (Cat item in cats)
         {
             if (!item.mCollider.IsTouching(mCollider))
             {
@@ -84,7 +95,7 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        howManyInText.text = "Cats in: " + howmanyin + "/" + Repulsive.SpawnedRepulsives.Count;
+        howManyInText.text = "Cats in: " + howmanyin + "/" + cats.Length;
 
         if (levelState != ELevelState.Success)
         {
