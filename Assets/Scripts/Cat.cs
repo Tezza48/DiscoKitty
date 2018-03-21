@@ -17,6 +17,7 @@ public class Cat : MonoBehaviour
     [Header("ComponentRefs")]
     public Rigidbody2D mRigid;
     public Collider2D mCollider;
+    public LineRenderer _lineRenderer;
 
 #if UNITY_ANDROID || UNITY_IOS
     //private bool mIsFingerDragging;
@@ -28,7 +29,7 @@ public class Cat : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-
+        _lineRenderer.enabled = false;
     }
 
     // Update is called once per frame
@@ -37,27 +38,37 @@ public class Cat : MonoBehaviour
 
     }
 
+    private void SetLineRendererPositions(Vector2 mouseWorldPos)
+    {
+        _lineRenderer.SetPosition(0, transform.position + Vector3.back);
+        _lineRenderer.SetPosition(1, (Vector3)mouseWorldPos + Vector3.back);
+    }
+
 #if UNITY_STANDALONE
     private void OnMouseDown()
     {
-        
+        _lineRenderer.enabled = true;
+        SetLineRendererPositions(transform.position);
     }
     private void OnMouseDrag()
     {
         Vector2 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Debug.DrawLine(mouseWorldPos, transform.position);
         mRigid.AddForce((mouseWorldPos - (Vector2)transform.position) * dragForce, ForceMode2D.Force);
+        SetLineRendererPositions(mouseWorldPos);
     }
+
     private void OnMouseUp()
     {
-        
+        _lineRenderer.enabled = false;
     }
 #endif
 
 #if UNITY_ANDROID || UNITY_IOS
     void BeginTouchInput(Touch touch)
     {
-
+        _lineRenderer.enabled = true;
+        SetLineRendererPositions(transform.position);
     }
 
     void MovedTouchInput(Touch touch)
@@ -65,11 +76,12 @@ public class Cat : MonoBehaviour
         Vector2 touchWorldPos = Camera.main.ScreenToWorldPoint(touch.position);
         Debug.DrawLine(touchWorldPos, transform.position);
         mRigid.AddForce((touchWorldPos - (Vector2)transform.position) * dragForce, ForceMode2D.Force);
+        SetLineRendererPositions(touchWorldPos);
     }
 
     void EndTouchInput(Touch touch)
     {
-
+        _lineRenderer.enabled = false;
     }
 #endif
 }

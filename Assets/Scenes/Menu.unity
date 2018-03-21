@@ -136,7 +136,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 78257806}
   m_LocalRotation: {x: -0, y: -0, z: -0.000034108754, w: 1}
-  m_LocalPosition: {x: 0, y: -10, z: 0}
+  m_LocalPosition: {x: 0, y: -7, z: 0}
   m_LocalScale: {x: 27.700012, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 721455309}
@@ -430,7 +430,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 482038134}
   m_LocalRotation: {x: -0, y: -0, z: 0.70683086, w: 0.7073826}
-  m_LocalPosition: {x: 10, y: 0, z: 0}
+  m_LocalPosition: {x: 8.5, y: 0, z: 0}
   m_LocalScale: {x: 27.700003, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 721455309}
@@ -679,7 +679,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 861076677}
   m_LocalRotation: {x: -0, y: -0, z: 0.70683086, w: 0.7073826}
-  m_LocalPosition: {x: -10, y: 0, z: 0}
+  m_LocalPosition: {x: -8.5, y: 0, z: 0}
   m_LocalScale: {x: 27.7, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 721455309}
@@ -733,7 +733,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 886372996}
   m_LocalRotation: {x: -0, y: -0, z: -0.000034108754, w: 1}
-  m_LocalPosition: {x: 0, y: 10, z: 0}
+  m_LocalPosition: {x: -0, y: 5.5, z: 0}
   m_LocalScale: {x: 27.700003, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 721455309}
@@ -1146,3 +1146,41 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1850177316}
+--- !u!1 &2054232861 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1210356353663638, guid: 831bfd510a16a4d4c9bd41096eece9ed,
+    type: 2}
+  m_PrefabInternal: {fileID: 395831826}
+--- !u!114 &2054232862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2054232861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c5296fb42d2c841a37287e3066efae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!20 &2054232866 stripped
+Camera:
+  m_PrefabParentObject: {fileID: 20979001848610870, guid: 831bfd510a16a4d4c9bd41096eece9ed,
+    type: 2}
+  m_PrefabInternal: {fileID: 395831826}
+--- !u!114 &2054232868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2054232861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0c52e100aeda9444a6e8bab34e6e388, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  min: 2
+  max: 50
+  minBuffer: 0.1
+  maxBuffer: 1
+  lerpSpeed: 0.5
+  mCamera: {fileID: 2054232866}
