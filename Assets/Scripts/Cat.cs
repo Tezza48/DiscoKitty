@@ -44,7 +44,7 @@ public class Cat : MonoBehaviour
         _lineRenderer.SetPosition(1, (Vector3)mouseWorldPos + Vector3.back);
     }
 
-#if UNITY_STANDALONE
+#if UNITY_STANDALONE || true
     private void OnMouseDown()
     {
         _lineRenderer.enabled = true;

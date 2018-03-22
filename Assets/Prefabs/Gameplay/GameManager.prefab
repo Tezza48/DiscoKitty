@@ -56,7 +56,7 @@ Transform:
   m_GameObject: {fileID: 1727402676473754}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.883, y: 0.883, z: 0.883}
+  m_LocalScale: {x: 0.72400004, y: 0.72400004, z: 0.72400004}
   m_Children: []
   m_Father: {fileID: 4830777133467334}
   m_RootOrder: 0
@@ -109,7 +109,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.7
+  m_Radius: 3
 --- !u!82 &82684121814831980
 AudioSource:
   m_ObjectHideFlags: 1
@@ -202,18 +202,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88a5afeb26a917c44a0d8f1bf55e456f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  size: 1.4
+  isOnUpdate: 0
+  size: 6
   artwork: {fileID: 212310991188526596}
-  collider: {fileID: 58247093267661424}
+  circleCollider: {fileID: 58247093267661424}
   sizes:
   - 3.5
   - 10
   scaleRanges:
-  - {x: 0.05, y: 6}
-  - {x: 0.01, y: 1.6}
-  sprites:
-  - {fileID: 21300024, guid: 771514c255bc78a49bbe63f136eb01df, type: 3}
-  - {fileID: 21300022, guid: 771514c255bc78a49bbe63f136eb01df, type: 3}
+  - {x: 0.01, y: 1.2}
+  - {x: 0.01, y: 1.2}
+  zoneEmpty:
+  - {fileID: 21300000, guid: 702bd4db29ebe47419229e7f76b4aeea, type: 3}
+  - {fileID: 21300000, guid: 702bd4db29ebe47419229e7f76b4aeea, type: 3}
+  zoneFull:
+  - {fileID: 21300000, guid: c903da6394d2e55429f0f66c7c5288f1, type: 3}
+  - {fileID: 21300000, guid: c903da6394d2e55429f0f66c7c5288f1, type: 3}
 --- !u!114 &114725987230767806
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -228,11 +232,10 @@ MonoBehaviour:
   mCollider: {fileID: 58247093267661424}
   mRenderer: {fileID: 212310991188526596}
   mAudio: {fileID: 82684121814831980}
-  spriteIncomplete: {fileID: 21300024, guid: 771514c255bc78a49bbe63f136eb01df, type: 3}
-  spriteComplete: {fileID: 21300026, guid: 771514c255bc78a49bbe63f136eb01df, type: 3}
-  UI_WinPanel: {fileID: 0}
+  spriteIncomplete: {fileID: 21300000, guid: 702bd4db29ebe47419229e7f76b4aeea, type: 3}
+  spriteComplete: {fileID: 21300000, guid: c903da6394d2e55429f0f66c7c5288f1, type: 3}
   holdTime: 3
-  nextLevel: Level_C2Circle1
+  nextLevel: Menu
   musVamp: {fileID: 8300000, guid: d6b7424ed08c5b341ab37cecd2dbbddd, type: 3}
   musTadaa: {fileID: 8300000, guid: 500627f10f554254db468c3ec5c0e25c, type: 3}
   musTempoIdle: 1
@@ -282,7 +285,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300024, guid: 771514c255bc78a49bbe63f136eb01df, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 702bd4db29ebe47419229e7f76b4aeea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

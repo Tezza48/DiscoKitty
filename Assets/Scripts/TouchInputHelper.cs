@@ -12,11 +12,9 @@ public class TouchInputHelper : MonoBehaviour
     {
         touchMap = new Dictionary<int, GameObject>();
     }
-#endif
 
     private void Update()
     {
-#if UNITY_ANDROID || UNITY_IOS
         GameObject obj;
         foreach (Touch touch in Input.touches)
         {
@@ -43,7 +41,7 @@ public class TouchInputHelper : MonoBehaviour
                     if (touchMap.ContainsKey(touch.fingerId))
                     {
                         obj = touchMap[touch.fingerId];
-                        //obj.SendMessage("EndTouchInput", touch);
+                        obj.SendMessage("EndTouchInput", touch);
                         touchMap.Remove(touch.fingerId);
                     }
                     break;
@@ -59,6 +57,6 @@ public class TouchInputHelper : MonoBehaviour
                     break;
             }
         }
-#endif
     }
+#endif
 }

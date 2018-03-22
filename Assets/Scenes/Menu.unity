@@ -520,7 +520,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cf6a1707fc7a0b4f8fb8e1acb93d0ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstLevelName: Level_C1Circle1
+  firstLevelName: C1C1
 --- !u!4 &839514168
 Transform:
   m_ObjectHideFlags: 0

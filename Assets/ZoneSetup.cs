@@ -7,15 +7,23 @@ using UnityEditor;
 [ExecuteInEditMode]
 public class ZoneSetup: MonoBehaviour
 {
+    public bool isOnUpdate = false;
     [Range (1.0f, 10.0f)]
     public float size = 1.0f;
+
+    GameManager manager;
 
     public SpriteRenderer artwork;
     public CircleCollider2D circleCollider;
 
     public float[] sizes;
     public Vector2[] scaleRanges;
-    public Sprite[] sprites;
+    public Sprite[] zoneEmpty;
+    public Sprite[] zoneFull;
+
+    private void Awake()
+    {
+    }
 
     private void Start()
     {
@@ -27,6 +35,13 @@ public class ZoneSetup: MonoBehaviour
         {
             enabled = true;
         }
+    }
+
+    private void OnEnable()
+    {
+        circleCollider = GetComponent<CircleCollider2D>();
+        manager = GetComponent<GameManager>();
+        SetupZone();
     }
 
     // Use this for initialization
@@ -44,7 +59,11 @@ public class ZoneSetup: MonoBehaviour
         }
 
         // Set the artwork
-        artwork.sprite = sprites[selectedSize];
+        artwork.sprite = zoneEmpty[selectedSize];
+
+        manager.spriteIncomplete = zoneEmpty[selectedSize];
+        manager.spriteComplete = zoneFull[selectedSize];
+
         // Set the scale
 
         float scale = Mathf.Lerp(scaleRanges[selectedSize].x, scaleRanges[selectedSize].y, size / 10.0f);
@@ -57,7 +76,10 @@ public class ZoneSetup: MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        SetupZone();
+        if (isOnUpdate)
+        {
+            SetupZone();
+        }
     }
 }
 #endif
