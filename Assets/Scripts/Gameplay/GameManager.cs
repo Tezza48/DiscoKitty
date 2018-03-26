@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 using UObject = UnityEngine.Object;
 using UnityEngine.Analytics;
 
-[RequireComponent(typeof(Collider2D))]
+//[RequireComponent(typeof(Collider2D))]
 public class GameManager : MonoBehaviour
 {
 
@@ -19,17 +19,13 @@ public class GameManager : MonoBehaviour
     }
 
     [Header("Component Referances")]
-    public Collider2D mCollider;
-    public SpriteRenderer mRenderer;
     public AudioSource mAudio;
-    //public Repulsive mWinRepulsive;
 
-    [Header("Zone Artwork")]
-    public Sprite spriteIncomplete;
-    public Sprite spriteComplete;
+    // Scene Referances
+    private Zone[] zones;
+    private Cat[] cats;
 
-    //[Header("UI Elements")]
-    //private Text howManyInText;
+    // UI Referances
     private Text currentHoldTimeText;
     private GameObject UI_WinPanel;
     private UI_LevelProgress UI_Progress;
@@ -55,20 +51,30 @@ public class GameManager : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        // set the music to the vamp sound
         mAudio.clip = musVamp;
+        // Set the vamp to the default tempo
         mAudio.pitch = musTempoIdle;
+
         tTimerCurrentHold = Time.time + holdTime;
 
+        // Progress display on the UI
         UI_Progress = FindObjectOfType<UI_LevelProgress>();
 
+        // Get referance to win screen on the UI
         UI_WinPanel = GameObject.Find("Win Panel");
+        // Setup event to fire when the player clicks next level
         UI_WinPanel.transform.GetChild(1).GetComponent<Button>().onClick.AddListener(LoadNextLevel);
-
+        // finally hide it until we need it later
         UI_WinPanel.SetActive(false);
-        
+
+        zones = FindObjectsOfType<Zone>();
+        cats = FindObjectsOfType<Cat>();
+
         //howManyInText = GameObject.Find("HowManyInText").GetComponent<Text>();
         currentHoldTimeText = GameObject.Find("CurrentHoldText").GetComponent<Text>();
 
+        // time that the user started the level in seconds. For analytics
         levelStartTime = Time.time;
 
     }
@@ -80,30 +86,30 @@ public class GameManager : MonoBehaviour
         {
             LevelComplete();
         }
-        // count the number of cats inside
+
+        // determine how many of the cats are in
         int howManyIn = 0;
-        bool allIn = true;
-        // check that all repulsives are touching trigger
-        Cat[] cats = FindObjectsOfType<Cat>();
-        foreach (Cat item in cats)
+        foreach (Cat cat in cats)
         {
-            if (!item.mCollider.IsTouching(mCollider))
+            bool wasCatIn = false;
+            // is the cat in a zone
+            foreach (Zone zone in zones)
             {
-                allIn = false;
-            }
-            else
-            {
-                howManyIn++;
+                if (wasCatIn)
+                    continue;
+                if (cat.catCollider.IsTouching(zone.zoneCollider))
+                {
+                    howManyIn++;
+                    wasCatIn = true;
+                }
             }
         }
 
         UI_Progress.CurrentCatsIn = howManyIn;
 
-        //howManyInText.text = "Cats in: " + howmanyin + "/" + cats.Length;
-
         if (levelState != ELevelState.Success)
         {
-            if (allIn)
+            if (howManyIn == cats.Length)
                 levelState = ELevelState.AllIn;
             else
                 levelState = ELevelState.Idle;
@@ -119,19 +125,13 @@ public class GameManager : MonoBehaviour
 
                 currentHoldTimeText.text = "Hold for: " + (tTimerCurrentHold - Time.time).ToString("N1") + " Seconds";
 
-                //mAudio.pitch = Mathf.Lerp(mAudio.pitch, musTempoIdle, 0.001f);
-
-                mRenderer.sprite = spriteIncomplete;
-
                 break;
             case ELevelState.AllIn:
 
                 currentHoldTimeText.text = "Hold for: " + (tTimerCurrentHold - Time.time).ToString("N1") + " Seconds";
 
                 // lerp between the two pitches using current hold time
-                mAudio.pitch = Mathf.Lerp(musTempoIdle, musTempoFinish, (holdTime - (tTimerCurrentHold - Time.time))/ holdTime);
-
-                mRenderer.sprite = spriteComplete;
+                mAudio.pitch = Mathf.Lerp(musTempoIdle, musTempoFinish, (holdTime - (tTimerCurrentHold - Time.time)) / holdTime);
 
                 if (Time.time > tTimerCurrentHold)
                 {
@@ -139,7 +139,6 @@ public class GameManager : MonoBehaviour
                 }
                 break;
             case ELevelState.Success:
-                mRenderer.sprite = spriteComplete;
                 break;
             default:
                 break;
@@ -155,10 +154,12 @@ public class GameManager : MonoBehaviour
         mAudio.pitch = 1.0f;
         mAudio.loop = false;
         mAudio.Play();
-        Analytics.CustomEvent("levelCompleted", new Dictionary<string, object>
+
+        string levelName = SceneManager.GetActiveScene().name;
+        float playTime = Time.time - levelStartTime;
+        Analytics.CustomEvent("level_" + levelName, new Dictionary<string, object>
         {
-            { "levelID", SceneManager.GetActiveScene().name },
-            { "playTime", Time.time - levelStartTime}
+            { "playTime", playTime}
         });
     }
 

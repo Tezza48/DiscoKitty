@@ -16,7 +16,7 @@ public class Cat : MonoBehaviour
 
     [Header("ComponentRefs")]
     public Rigidbody2D mRigid;
-    public Collider2D mCollider;
+    public Collider2D catCollider;
     public LineRenderer _lineRenderer;
 
 #if UNITY_ANDROID || UNITY_IOS
