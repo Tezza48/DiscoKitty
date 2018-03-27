@@ -16,6 +16,17 @@ public class LevelManager : EditorWindow
     }
 
     [System.Serializable]
+    public class LevelListArray
+    {
+        public string[] names;
+
+        public LevelListArray()
+        {
+            names = new string[0];
+        }
+    }
+
+    [System.Serializable]
     public class LevelData
     {
         public Vector3 PositionAndRotation;

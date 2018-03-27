@@ -10,7 +10,40 @@ using UnityEngine.Analytics;
 //[RequireComponent(typeof(Collider2D))]
 public class GameManager : MonoBehaviour
 {
+    // Level Loading Stuff
+    public enum ObjectType
+    {
+        Cat,
+        Pickle,
+        Zone,
+        None
+    }
 
+    [System.Serializable]
+    public class LevelData
+    {
+        public Vector3 PositionAndRotation;
+        public ObjectType Type;
+        public float Radius;
+    }
+
+    [System.Serializable]
+    public class LevelDataArray
+    {
+        public LevelData[] Content;
+
+        public LevelDataArray()
+        {
+            Content = new LevelData[0];
+        }
+
+        public LevelDataArray(LevelData[] data)
+        {
+            Content = data;
+        }
+    }
+
+    // General Stuff
     public enum ELevelState
     {
         Idle,
@@ -142,6 +175,42 @@ public class GameManager : MonoBehaviour
                 break;
             default:
                 break;
+        }
+    }
+
+    public void SetLevel(string name, bool clear = false)
+    {
+        if (clear)
+        {
+            GameObject[] LevelObjects = GameObject.FindGameObjectsWithTag("LevelContent");
+
+            foreach (var item in LevelObjects)
+            {
+                DestroyImmediate(item);
+            }
+        }
+
+        LevelDataArray levelData = new LevelDataArray();
+        TextAsset json = Resources.Load<TextAsset>(name);
+        JsonUtility.FromJsonOverwrite(json.ToString(), levelData);
+
+        LevelDataPrefabs dataPrefabs = GetComponent<LevelDataPrefabs>();
+
+        foreach (var item in levelData.Content)
+        {
+            GameObject newObject;
+
+            Vector2 pos = item.PositionAndRotation;
+            float rotation = item.PositionAndRotation.z;
+            Quaternion rot = Quaternion.Euler(0.0f, 0.0f, rotation);
+            newObject = dataPrefabs.Prefabs[(int)item.Type];
+
+            newObject = Instantiate(newObject, pos, rot);
+
+            if (item.Type == ObjectType.Zone)
+            {
+                newObject.GetComponent<Zone>().size = item.Radius;
+            }
         }
     }
 
