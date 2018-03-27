@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: ed7dbf5e531cb454fb8b21d4e6b9d100
-timeCreated: 1522101938
+timeCreated: 1522154084
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -12,6 +12,7 @@ TextureImporter:
     21300010: cat-body
     21300012: shadow
     21300014: cat-face-moving
+    21300016: cat-face-indisco
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -149,8 +150,8 @@ TextureImporter:
       name: cat-face-idle
       rect:
         serializedVersion: 2
-        x: 1375
-        y: 1701
+        x: 1198
+        y: 1707
         width: 335
         height: 124
       alignment: 0
@@ -219,10 +220,24 @@ TextureImporter:
       name: cat-face-moving
       rect:
         serializedVersion: 2
-        x: 1378
-        y: 1895
+        x: 1198
+        y: 1903
         width: 335
         height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cat-face-indisco
+      rect:
+        serializedVersion: 2
+        x: 1613
+        y: 1707
+        width: 321
+        height: 115
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
