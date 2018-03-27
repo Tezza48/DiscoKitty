@@ -1,16 +1,11 @@
 fileFormatVersion: 2
-guid: 34715e1e5bb25144c8f133a877b375c4
-timeCreated: 1522104310
+guid: a05e180c411abd8448339fb928ef9ae0
+timeCreated: 1522106473
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: cactus
-    21300002: shrub-01
-    21300004: shrub-02
-    21300006: shrub-03
-    21300008: pickle
-    21300010: disco-ball
-    21300012: disco-ball-cable
+    21300000: disco-floor-1
+    21300002: disco-floor-2
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -117,27 +112,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: cactus
+      name: disco-floor-1
       rect:
         serializedVersion: 2
-        x: 24
-        y: 53
-        width: 579
-        height: 879
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: shrub-01
-      rect:
-        serializedVersion: 2
-        x: 645
-        y: 103
-        width: 241
-        height: 213
+        x: 14
+        y: 1054
+        width: 981
+        height: 984
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,69 +126,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: shrub-02
+      name: disco-floor-2
       rect:
         serializedVersion: 2
-        x: 960
-        y: 87
-        width: 267
-        height: 391
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: shrub-03
-      rect:
-        serializedVersion: 2
-        x: 1304
-        y: 81
-        width: 229
-        height: 182
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: pickle
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 1168
-        width: 316
-        height: 880
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: disco-ball
-      rect:
-        serializedVersion: 2
-        x: 692
-        y: 556
-        width: 800
-        height: 800
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: disco-ball-cable
-      rect:
-        serializedVersion: 2
-        x: 1946
-        y: 53
-        width: 73
-        height: 1582
+        x: 1033
+        y: 1034
+        width: 1004
+        height: 1004
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

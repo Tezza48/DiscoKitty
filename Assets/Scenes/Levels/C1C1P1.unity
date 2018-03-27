@@ -388,6 +388,12 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e7b6baa0c0f4a7d4c92911a04245e0dd, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &1480303029 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114725987230767806, guid: e7b6baa0c0f4a7d4c92911a04245e0dd,
+    type: 2}
+  m_PrefabInternal: {fileID: 1480303028}
+  m_Script: {fileID: 11500000, guid: 15c56c31227b9d549a9733a49f54e65f, type: 3}
 --- !u!1 &1600121729
 GameObject:
   m_ObjectHideFlags: 0
@@ -404,7 +410,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1600121730
 Transform:
   m_ObjectHideFlags: 0
@@ -652,6 +658,16 @@ Prefab:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114034408734533088, guid: 79edc6e291c3e074e9ed871490542936,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1480303029}
+    - target: {fileID: 114034408734533088, guid: 79edc6e291c3e074e9ed871490542936,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadNextLevel
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 79edc6e291c3e074e9ed871490542936, type: 2}
   m_IsPrefabParent: 0
@@ -720,6 +736,14 @@ Prefab:
         type: 2}
       propertyPath: isOnUpdate
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4736667234725424, guid: a8a940de9ebcfea41969a8d6ba5c0fc3, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -6.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 4736667234725424, guid: a8a940de9ebcfea41969a8d6ba5c0fc3, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -1.08
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a8a940de9ebcfea41969a8d6ba5c0fc3, type: 2}
