@@ -1,11 +1,12 @@
 fileFormatVersion: 2
 guid: 85285aa79d6f8d04ba335c978ab78a99
-timeCreated: 1522099312
+timeCreated: 1522169345
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
     21300000: deco
     21300002: pause-btn
+    21300004: circle-shape
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -129,10 +130,24 @@ TextureImporter:
       name: pause-btn
       rect:
         serializedVersion: 2
-        x: 1075
-        y: 1422
+        x: 1460
+        y: 1526
         width: 559
         height: 487
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: circle-shape
+      rect:
+        serializedVersion: 2
+        x: 834
+        y: 1413
+        width: 600
+        height: 600
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
