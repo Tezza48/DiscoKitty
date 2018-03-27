@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 34715e1e5bb25144c8f133a877b375c4
-timeCreated: 1522104310
+timeCreated: 1522162401
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -176,10 +176,10 @@ TextureImporter:
       name: pickle
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1168
-        width: 316
-        height: 880
+        x: 53
+        y: 1103
+        width: 349
+        height: 897
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
