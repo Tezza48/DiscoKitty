@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 61235811228244900}
   m_Layer: 0
   m_Name: Pickle
-  m_TagString: Untagged
+  m_TagString: LevelContent
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
