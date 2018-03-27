@@ -53,7 +53,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.20000002, g: 0.20000002, b: 0.20000002, a: 0}
+  m_BackGroundColor: {r: 0.9852941, g: 0.7189849, b: 0.51438147, a: 1}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -107,8 +107,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   min: 3
   max: 10
-  minBuffer: 0.5
-  maxBuffer: 1
+  minBuffer: 1
+  maxBuffer: 4
   lerpSpeed: 0.5
   mCamera: {fileID: 20979001848610870}
 --- !u!124 &124009263254071388
