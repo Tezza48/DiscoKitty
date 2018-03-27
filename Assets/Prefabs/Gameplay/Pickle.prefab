@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 114014088343689652}
   - component: {fileID: 114458062044713020}
   - component: {fileID: 61235811228244900}
+  - component: {fileID: 95067605824230058}
   m_Layer: 0
   m_Name: Pickle
   m_TagString: Untagged
@@ -38,8 +39,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1405632133385876}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.37784493, y: 0.37784493, z: 0.37784493}
+  m_LocalPosition: {x: -2, y: 0, z: 0}
+  m_LocalScale: {x: 0.37784493, y: 0.3778449, z: 0.3778449}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -80,7 +81,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.16, y: 8.8}
+    oldSize: {x: 3.78, y: 9.01}
     newSize: {x: 13.1, y: 13.2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -89,6 +90,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.47, y: 7.82}
   m_EdgeRadius: 0
+--- !u!95 &95067605824230058
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1405632133385876}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0a4234907aa6ee14681ebea5b7c51fad, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114014088343689652
 MonoBehaviour:
   m_ObjectHideFlags: 1
