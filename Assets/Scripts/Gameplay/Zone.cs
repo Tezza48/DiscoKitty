@@ -26,7 +26,7 @@ public class Zone: MonoBehaviour
 
     private void Awake()
     {
-
+        SetupZone();
     }
 
     private void Start()
@@ -41,7 +41,7 @@ public class Zone: MonoBehaviour
     }
 
     // Use this for initialization
-    void SetupZone()
+    public void SetupZone()
     {
         zoneSize = sizes.Length - 1;
 

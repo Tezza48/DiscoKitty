@@ -10,7 +10,40 @@ using UnityEngine.Analytics;
 //[RequireComponent(typeof(Collider2D))]
 public class GameManager : MonoBehaviour
 {
+    // Level Loading Stuff
+    public enum ObjectType
+    {
+        Cat,
+        Pickle,
+        Zone,
+        None
+    }
 
+    [System.Serializable]
+    public class LevelData
+    {
+        public Vector3 PositionAndRotation;
+        public ObjectType Type;
+        public float Radius;
+    }
+
+    [System.Serializable]
+    public class LevelDataArray
+    {
+        public LevelData[] Content;
+
+        public LevelDataArray()
+        {
+            Content = new LevelData[0];
+        }
+
+        public LevelDataArray(LevelData[] data)
+        {
+            Content = data;
+        }
+    }
+
+    // General Stuff
     public enum ELevelState
     {
         Idle,
@@ -32,9 +65,6 @@ public class GameManager : MonoBehaviour
 
     [Tooltip("Time to keep all cats in to win")]
     public float holdTime = 3;
-
-    [Header("Level Stuff")]
-    public string nextLevel;
 
     [Header("Music")]
     public AudioClip musVamp;
@@ -68,6 +98,7 @@ public class GameManager : MonoBehaviour
         // finally hide it until we need it later
         UI_WinPanel.SetActive(false);
 
+        // These are only useful when the scene is already populates when loaded
         zones = FindObjectsOfType<Zone>();
         cats = FindObjectsOfType<Cat>();
 
@@ -77,6 +108,37 @@ public class GameManager : MonoBehaviour
         // time that the user started the level in seconds. For analytics
         levelStartTime = Time.time;
 
+    }
+
+    internal void InstantiateLevel(LevelManager.LevelData[] data)
+    {
+        // destroy all level object just incase the blank level was saved over
+        GameObject[] LevelObjects = GameObject.FindGameObjectsWithTag("LevelContent");
+
+        foreach (var item in LevelObjects)
+        {
+            DestroyImmediate(item);
+        }
+
+        foreach (var item in data)
+        {
+            GameObject newObject;
+
+            Vector2 pos = item.PositionAndRotation;
+            float rotation = item.PositionAndRotation.z;
+            Quaternion rot = Quaternion.Euler(0.0f, 0.0f, rotation);
+            newObject = GetComponent<LevelDataPrefabs>().Prefabs[(int)item.Type];
+
+            newObject = Instantiate(newObject, pos, rot);
+
+            if (item.Type == LevelManager.ObjectType.Zone)
+            {
+                newObject.GetComponent<Zone>().size = item.Radius;
+                newObject.GetComponent<Zone>().SetupZone();
+            }
+        }
+        zones = FindObjectsOfType<Zone>();
+        cats = FindObjectsOfType<Cat>();
     }
 
     // Update is called once per frame
@@ -145,6 +207,42 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    //public void SetLevel(string name, bool clear = false)
+    //{
+    //    if (clear)
+    //    {
+    //        GameObject[] LevelObjects = GameObject.FindGameObjectsWithTag("LevelContent");
+    //
+    //        foreach (var item in LevelObjects)
+    //        {
+    //            DestroyImmediate(item);
+    //        }
+    //    }
+    //
+    //    LevelDataArray levelData = new LevelDataArray();
+    //    TextAsset json = Resources.Load<TextAsset>(name);
+    //    JsonUtility.FromJsonOverwrite(json.ToString(), levelData);
+    //
+    //    LevelDataPrefabs dataPrefabs = GetComponent<LevelDataPrefabs>();
+    //
+    //    foreach (var item in levelData.Content)
+    //    {
+    //        GameObject newObject;
+    //
+    //        Vector2 pos = item.PositionAndRotation;
+    //        float rotation = item.PositionAndRotation.z;
+    //        Quaternion rot = Quaternion.Euler(0.0f, 0.0f, rotation);
+    //        newObject = dataPrefabs.Prefabs[(int)item.Type];
+    //
+    //        newObject = Instantiate(newObject, pos, rot);
+    //
+    //        if (item.Type == ObjectType.Zone)
+    //        {
+    //            newObject.GetComponent<Zone>().size = item.Radius;
+    //        }
+    //    }
+    //}
+
     private void LevelComplete()
     {
         //mWinRepulsive.enabled = true;
@@ -166,6 +264,6 @@ public class GameManager : MonoBehaviour
     public void LoadNextLevel()
     {
         //Debug.Log("Trying to load next level");
-        SceneManager.LoadScene(nextLevel, LoadSceneMode.Single);
+        LevelManager.Singleton.LoadNextLevel();
     }
 }

@@ -4,46 +4,30 @@ using System;
 using UnityEngine;
 using UnityEditor;
 using System.IO;
+using LevelData = LevelManager.LevelData;
+using LevelDataArray = LevelManager.LevelDataArray;
+using ObjectType = LevelManager.ObjectType;
 
-public class LevelManager : EditorWindow
+public class LevelEditor : EditorWindow
 {
-    public enum ObjectType
-    {
-        Cat,
-        Pickle,
-        Zone,
-        None
-    }
 
-    [System.Serializable]
-    public class LevelData
-    {
-        public Vector3 PositionAndRotation;
-        public ObjectType Type;
-        public float Radius;
-    }
 
-    [System.Serializable]
-    public class LevelDataArray
-    {
-        public LevelData[] Content;
+    //[System.Serializable]
+    //public class LevelListArray
+    //{
+    //    public string[] names;
 
-        public LevelDataArray()
-        {
-            Content = new LevelData[0];
-        }
-
-        public LevelDataArray(LevelData[] data)
-        {
-            Content = data;
-        }
-    }
+    //    public LevelListArray()
+    //    {
+    //        names = new string[0];
+    //    }
+    //}
 
     [MenuItem("Window/Level Editor")]
     public static void ShowWindow()
     {
         //Show existing window instance. If one doesn't exist, make one.
-        EditorWindow.GetWindow(typeof(LevelManager));
+        EditorWindow.GetWindow(typeof(LevelEditor));
     }
 
     private string fileName = "";
@@ -135,6 +119,7 @@ public class LevelManager : EditorWindow
                 if (item.Type == ObjectType.Zone)
                 {
                     newObject.GetComponent<Zone>().size = item.Radius;
+                    newObject.GetComponent<Zone>().SetupZone();
                 }
             }
         }
