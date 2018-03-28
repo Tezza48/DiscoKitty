@@ -5,7 +5,7 @@ using UnityEngine;
 public class UI_LevelButton : MonoBehaviour {
 
     public UI_LevelList parentElement;
-    public string level;
+    public int levelID;
 
 	// Use this for initialization
 	void Start () {
@@ -19,6 +19,6 @@ public class UI_LevelButton : MonoBehaviour {
 
     public void OnClick()
     {
-        parentElement.LoadLevel(level);
+        LevelManager.Singleton.LoadLevel(levelID);
     }
 }
