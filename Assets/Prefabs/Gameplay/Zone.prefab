@@ -84,6 +84,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4987934363654038}
   - component: {fileID: 212070421010369016}
+  - component: {fileID: 95611976119595604}
   m_Layer: 0
   m_Name: Artwork
   m_TagString: Untagged
@@ -205,6 +206,23 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.975
+--- !u!95 &95611976119595604
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1676848840141492}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6597fdddbb1a88b45ad682e8f18d0d06, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114208710485468388
 MonoBehaviour:
   m_ObjectHideFlags: 1
