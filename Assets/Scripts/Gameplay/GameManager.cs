@@ -185,12 +185,12 @@ public class GameManager : MonoBehaviour
 
                 mAudio.pitch = musTempoIdle;
 
-                currentHoldTimeText.text = "Hold for: " + (tTimerCurrentHold - Time.time).ToString("N1") + " Seconds";
+                currentHoldTimeText.text = "" + (tTimerCurrentHold - Time.time).ToString("N1") + "";
 
                 break;
             case ELevelState.AllIn:
 
-                currentHoldTimeText.text = "Hold for: " + (tTimerCurrentHold - Time.time).ToString("N1") + " Seconds";
+                currentHoldTimeText.text = "" + (tTimerCurrentHold - Time.time).ToString("N1") + "";
 
                 // lerp between the two pitches using current hold time
                 mAudio.pitch = Mathf.Lerp(musTempoIdle, musTempoFinish, (holdTime - (tTimerCurrentHold - Time.time)) / holdTime);
