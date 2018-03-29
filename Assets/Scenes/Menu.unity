@@ -3852,6 +3852,12 @@ Prefab:
       propertyPath: m_Name
       value: Cat (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 212535453315821516, guid: 9a31f3e3faef4664e89fa05bc4ae7b65,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300018, guid: ed7dbf5e531cb454fb8b21d4e6b9d100,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9a31f3e3faef4664e89fa05bc4ae7b65, type: 2}
   m_IsPrefabParent: 0

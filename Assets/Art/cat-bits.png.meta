@@ -1,10 +1,10 @@
 fileFormatVersion: 2
 guid: ed7dbf5e531cb454fb8b21d4e6b9d100
-timeCreated: 1522170316
+timeCreated: 1522293386
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: cat-head
+    21300000: cat-head-01
     21300002: cat-tail
     21300004: cat-face-idle
     21300006: cat-skate
@@ -13,6 +13,7 @@ TextureImporter:
     21300012: shadow
     21300014: cat-face-moving
     21300016: cat-face-indisco
+    21300018: cat-head-02
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -119,11 +120,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: cat-head
+      name: cat-head-01
       rect:
         serializedVersion: 2
-        x: 250
-        y: 1413
+        x: 52
+        y: 1521
         width: 645
         height: 495
       alignment: 0
@@ -136,8 +137,8 @@ TextureImporter:
       name: cat-tail
       rect:
         serializedVersion: 2
-        x: 934
-        y: 1535
+        x: 932
+        y: 1582
         width: 195
         height: 250
       alignment: 0
@@ -164,8 +165,8 @@ TextureImporter:
       name: cat-skate
       rect:
         serializedVersion: 2
-        x: 804
-        y: 1086
+        x: 935
+        y: 1878
         width: 178
         height: 161
       alignment: 0
@@ -178,8 +179,8 @@ TextureImporter:
       name: cat-leg
       rect:
         serializedVersion: 2
-        x: 1084
-        y: 1091
+        x: 771
+        y: 1795
         width: 114
         height: 215
       alignment: 0
@@ -192,24 +193,10 @@ TextureImporter:
       name: cat-body
       rect:
         serializedVersion: 2
-        x: 1311
+        x: 697
         y: 1252
         width: 477
         height: 288
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: shadow
-      rect:
-        serializedVersion: 2
-        x: 1024
-        y: 578
-        width: 837
-        height: 316
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -240,6 +227,20 @@ TextureImporter:
         height: 115
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cat-head-02
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 947
+        width: 507
+        height: 480
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
