@@ -7,6 +7,7 @@ TextureImporter:
     21300000: deco
     21300002: pause-btn
     21300004: circle-shape
+    21300006: back-btn
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -148,6 +149,20 @@ TextureImporter:
         y: 1413
         width: 600
         height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: back-btn
+      rect:
+        serializedVersion: 2
+        x: 1524
+        y: 995
+        width: 471
+        height: 480
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

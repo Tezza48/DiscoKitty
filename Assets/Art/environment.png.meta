@@ -11,6 +11,8 @@ TextureImporter:
     21300008: pickle
     21300010: disco-ball
     21300012: disco-ball-cable
+    21300014: fence
+    21300016: face-grumpy
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -123,7 +125,7 @@ TextureImporter:
         x: 24
         y: 53
         width: 579
-        height: 879
+        height: 878
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,6 +210,34 @@ TextureImporter:
         y: 53
         width: 73
         height: 1582
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: fence
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 1702
+        width: 855
+        height: 332
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: face-grumpy
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 932
+        width: 201
+        height: 139
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
