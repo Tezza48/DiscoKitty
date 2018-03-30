@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 124009263254071388}
   - component: {fileID: 81890064921161132}
   - component: {fileID: 114063930536654698}
+  - component: {fileID: 114092440099363416}
   m_Layer: 0
   m_Name: Tracking Camera
   m_TagString: MainCamera
@@ -111,6 +112,19 @@ MonoBehaviour:
   maxBuffer: 4
   lerpSpeed: 0.5
   mCamera: {fileID: 20979001848610870}
+--- !u!114 &114092440099363416
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1210356353663638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a16604c3e035f245b2afdba00c69859, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeOutTexture: {fileID: 2800000, guid: cc9d02b000fecdf49849cf27e8968ce0, type: 3}
+  fadeSpeed: 0.8
 --- !u!124 &124009263254071388
 Behaviour:
   m_ObjectHideFlags: 1
