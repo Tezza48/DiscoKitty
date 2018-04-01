@@ -53,7 +53,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 243961074379375062, guid: 360e8196ae68a164d8855abe0b29d53b,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: d6b7424ed08c5b341ab37cecd2dbbddd, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 73c57d8ff163d944a850ab0ec23250e0, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.622
   m_Pitch: 1
@@ -152,9 +152,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mAudio: {fileID: 82684121814831980}
   holdTime: 3
-  nextLevel: Menu
   musVamp: {fileID: 8300000, guid: d6b7424ed08c5b341ab37cecd2dbbddd, type: 3}
-  musTadaa: {fileID: 8300000, guid: 500627f10f554254db468c3ec5c0e25c, type: 3}
+  musTadaa: {fileID: 8300000, guid: c885355ef77138c49a6b8a836900a81c, type: 3}
   musTempoIdle: 1
   musTempoFinish: 2
 --- !u!114 &114783513703169690
