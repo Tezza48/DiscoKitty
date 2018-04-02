@@ -8,7 +8,9 @@ TextureImporter:
     21300002: disco-ball
     21300004: game-components_0
     21300006: happy-face
-    21300008: speaker(placeholder)
+    21300008: disco-ball-thumb
+    21300010: box-cat-out
+    21300012: box-cat-in
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -113,9 +115,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 375
-        y: 1239
-        width: 814
-        height: 802
+        y: 1237
+        width: 816
+        height: 804
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,10 +142,10 @@ TextureImporter:
       name: happy-face
       rect:
         serializedVersion: 2
-        x: 459
-        y: 935
-        width: 650
-        height: 240
+        x: 445
+        y: 793
+        width: 664
+        height: 366
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -151,15 +153,43 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: speaker(placeholder)
+      name: disco-ball-thumb
       rect:
         serializedVersion: 2
-        x: 1223
-        y: 1579
-        width: 480
-        height: 464
+        x: 1263
+        y: 1343
+        width: 338
+        height: 460
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: box-cat-out
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 175
+        width: 794
+        height: 534
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: box-cat-in
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 203
+        width: 976
+        height: 540
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
