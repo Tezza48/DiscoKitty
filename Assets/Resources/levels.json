@@ -1,20 +1,20 @@
 {
-  "Levels":
-  [
+  "Levels": [
     "cats1circles1",
     "cats1circles1pickles1",
-	"cats2circles1",
+    "cats1circles1boxes1",
+    "cats2circles1",
     "cats2circles1pickles1",
-	"cats2circles2",
-	"cats2circles2pickles1",
-	"cats2circles1pickles2",
-	"cats2circles2pickles2",
+    "cats2circles2",
+    "cats2circles2pickles1",
+    "cats2circles1pickles2",
+    "cats2circles2pickles2",
     "cats3circles1",
-	"cats3circles2",
-	"cats3circle1small",
-	"cats3circles2pickles1",
-	"cats4circles1",
-	"cats4circles2",
-	"cats3circles3pickles1"
+    "cats3circles2",
+    "cats3circle1small",
+    "cats3circles2pickles1",
+    "cats4circles1",
+    "cats4circles2",
+    "cats3circles3pickles1"
   ]
 }

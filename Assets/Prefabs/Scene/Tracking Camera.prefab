@@ -110,7 +110,7 @@ MonoBehaviour:
   max: 10
   minBuffer: 1
   maxBuffer: 4
-  lerpSpeed: 0.5
+  lerpSpeed: 10
   mCamera: {fileID: 20979001848610870}
 --- !u!114 &114092440099363416
 MonoBehaviour:
