@@ -14,6 +14,7 @@ TextureImporter:
     21300014: cat-face-moving
     21300016: cat-face-indisco
     21300018: cat-head-02
+    21300020: laser-pointer
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -137,10 +138,10 @@ TextureImporter:
       name: cat-face-idle
       rect:
         serializedVersion: 2
-        x: 1198
-        y: 1707
-        width: 335
-        height: 124
+        x: 31
+        y: 1376
+        width: 338
+        height: 126
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,10 +180,10 @@ TextureImporter:
       name: cat-body
       rect:
         serializedVersion: 2
-        x: 672
-        y: 1251
-        width: 503
-        height: 308
+        x: 8
+        y: 1737
+        width: 505
+        height: 304
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,10 +194,10 @@ TextureImporter:
       name: cat-face-moving
       rect:
         serializedVersion: 2
-        x: 1198
-        y: 1903
-        width: 335
-        height: 126
+        x: 31
+        y: 1211
+        width: 338
+        height: 129
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -207,12 +208,26 @@ TextureImporter:
       name: cat-face-indisco
       rect:
         serializedVersion: 2
-        x: 1613
-        y: 1707
-        width: 321
-        height: 115
+        x: 37
+        y: 1523
+        width: 324
+        height: 118
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: laser-pointer
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 863
+        width: 384
+        height: 216
+      alignment: 9
+      pivot: {x: 0.25804505, y: 0.49294847}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
