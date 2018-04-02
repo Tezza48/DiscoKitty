@@ -2,21 +2,21 @@
     "Content": [
         {
             "PositionAndRotation": {
+                "x": 0.23000000417232514,
+                "y": -2.9600000381469728,
+                "z": 0.0
+            },
+            "Type": 0,
+            "Radius": 0.0
+        },
+        {
+            "PositionAndRotation": {
                 "x": 0.0,
                 "y": 0.0,
                 "z": 0.0
             },
             "Type": 2,
-            "Radius": 1.9500000476837159
-        },
-        {
-            "PositionAndRotation": {
-                "x": 1.2200000286102296,
-                "y": 1.5499999523162842,
-                "z": 0.0
-            },
-            "Type": 0,
-            "Radius": 0.0
+            "Radius": 4.0
         }
     ]
 }

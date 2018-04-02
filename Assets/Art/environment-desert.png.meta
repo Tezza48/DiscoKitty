@@ -4,12 +4,14 @@ timeCreated: 1522378840
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: fence-01
+    21300000: fence-front
     21300002: cactus
     21300004: shrub-01
     21300006: shrub-02
     21300008: shrub-03
     21300010: tumble-weed
+    21300012: fence-sides
+    21300014: desert-rocks-01
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -96,15 +98,15 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: fence-01
+      name: fence-front
       rect:
         serializedVersion: 2
-        x: 453
+        x: 455
         y: 1699
         width: 1562
         height: 338
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -118,7 +120,7 @@ TextureImporter:
         width: 582
         height: 882
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -132,7 +134,7 @@ TextureImporter:
         width: 246
         height: 218
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -146,7 +148,7 @@ TextureImporter:
         width: 270
         height: 394
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -160,7 +162,7 @@ TextureImporter:
         width: 233
         height: 186
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -173,6 +175,34 @@ TextureImporter:
         y: 42
         width: 356
         height: 333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: fence-sides
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 1006
+        width: 316
+        height: 1019
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: desert-rocks-01
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 1049
+        width: 556
+        height: 488
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
