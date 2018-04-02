@@ -11,6 +11,7 @@ public class LevelManager : MonoBehaviour
         Cat,
         Pickle,
         Zone,
+        Box,
         None
     }
 

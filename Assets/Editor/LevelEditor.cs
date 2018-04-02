@@ -46,6 +46,7 @@ public class LevelEditor : EditorWindow
                 LevelData itemData = new LevelData();
                 Zone zone = item.GetComponent<Zone>();
                 Cat cat = item.GetComponent<Cat>();
+                BoxFlattener box = item.GetComponent<BoxFlattener>();
                 if (zone)
                 {
                     itemData.Type = ObjectType.Zone;
@@ -54,6 +55,10 @@ public class LevelEditor : EditorWindow
                 else if (cat)
                 {
                     itemData.Type = ObjectType.Cat;
+                }
+                else if (box)
+                {
+                    itemData.Type = ObjectType.Box;
                 }
                 else
                 {

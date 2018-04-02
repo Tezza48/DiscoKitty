@@ -60,12 +60,11 @@ public class GravityActor : MonoBehaviour
                     distance = Vector2.Distance(transform.position, item.transform.position);
                     if (distance < range)
                     {
-                        force += (Vector2)(transform.position - item.transform.position);
-
+                        force += (Vector2)(transform.position - item.transform.position) * item.forceAmmount;
                     }
                 }
             }
-            _rigid.AddForce(force * forceAmmount, ForceMode2D.Force);
+            _rigid.AddForce(force, ForceMode2D.Force);
 
         }
     }
