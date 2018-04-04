@@ -257,10 +257,36 @@ public class GameManager : MonoBehaviour
         string levelName = LevelManager.Singleton.levels[LevelManager.Singleton.currentLevelID];
         float playTime = Time.time - levelStartTime;
 
-        UI_WinScreenTime.text = playTime.ToString("N2");
+        GameSaveData data = GameData.LoadData();
 
-        // Currently dont cate about the highest level completed
-        GameData.SaveLevel(levelName, new LevelSaveData(playTime));
+        float bestTime;
+
+        // has this level got an entry in the save data?
+        // (has the player done this level before)
+        if (data.levelData.ContainsKey(levelName))
+        {
+            // current best time
+            bestTime = data.levelData[levelName].completionTime;
+        }
+        else
+        {
+            // player has not done this level; best time is really long
+            bestTime = Mathf.Infinity;
+        }
+
+
+        if (playTime < bestTime)
+        {
+            // player Beat preveous high score
+            UI_WinScreenTime.text = "Hi Score!\n" + playTime.ToString("N2");
+            // Currently dont cate about the highest level completed
+            GameData.SaveLevel(levelName, new LevelSaveData(playTime));
+        }
+        else
+        {
+            UI_WinScreenTime.text = playTime.ToString("N2");
+        }
+
 
         //Analytics.CustomEvent("level_" + levelName, new Dictionary<string, object>
         //{
