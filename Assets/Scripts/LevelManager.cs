@@ -86,6 +86,8 @@ public class LevelManager : MonoBehaviour
         StartCoroutine(StartNewLevel(levelData.Content));
     }
 
+    //internal int GetIDfromName()
+
     internal void LoadNextLevel()
     {
         if (currentLevelID+1 == levels.Length)

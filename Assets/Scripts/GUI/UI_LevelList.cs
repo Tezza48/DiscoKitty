@@ -21,12 +21,26 @@ public class UI_LevelList : MonoBehaviour
 
     private void Start()
     {
+        GameSaveData data = GameData.LoadData();
         for(int id = 0; id < LevelManager.Singleton.levels.Length; id++)
         {
+            string levelName = LevelManager.Singleton.levels[id];
+
             UI_LevelButton newButton = Instantiate(LevelButtonPrefab, transform).GetComponent<UI_LevelButton>();
             newButton.parentElement = this;
-            newButton.levelID = id;
-            newButton.transform.GetChild(0).GetComponent<Text>().text = (id+1).ToString();
+
+            float completionTime = 0.0f;
+
+            // get player's progress data
+            if (data.levelData.ContainsKey(levelName))
+            {
+                completionTime = data.levelData[levelName].completionTime;
+            }
+
+            // Initialize the button with player's data too
+            bool isUnlocked = data.highestLevel > id;
+            newButton.Init(id, completionTime, isUnlocked);
+            //newButton.transform.GetChild(0).GetComponent<Text>().text = (id+1).ToString();
         }
     }
 

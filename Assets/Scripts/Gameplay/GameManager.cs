@@ -62,6 +62,7 @@ public class GameManager : MonoBehaviour
     private Text currentHoldTimeText;
     private GameObject UI_WinPanel;
     private UI_LevelProgress UI_Progress;
+    public Text UI_WinScreenTime;
 
     [Tooltip("Time to keep all cats in to win")]
     public float holdTime = 3;
@@ -253,12 +254,18 @@ public class GameManager : MonoBehaviour
         mAudio.loop = false;
         mAudio.Play();
 
-        string levelName = SceneManager.GetActiveScene().name;
+        string levelName = LevelManager.Singleton.levels[LevelManager.Singleton.currentLevelID];
         float playTime = Time.time - levelStartTime;
-        Analytics.CustomEvent("level_" + levelName, new Dictionary<string, object>
-        {
-            { "playTime", playTime}
-        });
+
+        UI_WinScreenTime.text = playTime.ToString("N2");
+
+        // Currently dont cate about the highest level completed
+        GameData.SaveLevel(levelName, new LevelSaveData(playTime));
+
+        //Analytics.CustomEvent("level_" + levelName, new Dictionary<string, object>
+        //{
+        //    { "playTime", playTime}
+        //});
     }
 
     public void LoadNextLevel()

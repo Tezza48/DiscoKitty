@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UI_LevelButton : MonoBehaviour {
 
     public UI_LevelList parentElement;
-    public int levelID;
+    public Text name;
+    public Text time;
+    private int levelID;
 
 	// Use this for initialization
 	void Start () {
@@ -16,6 +19,13 @@ public class UI_LevelButton : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    public void Init(int id, float fastestTime, bool unlocked)
+    {
+        levelID = id;
+        name.text = (id + 1).ToString();
+        time.text = fastestTime > 0.0f ? fastestTime.ToString("N2") : "";
+    }
 
     public void OnClick()
     {
