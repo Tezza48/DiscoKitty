@@ -5,7 +5,8 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
     public float min = 5, max = 50;
-    public float minBuffer = 1, maxBuffer = 10;
+    public float buffer = 2.0f;
+    /*public float minBuffer = 1, maxBuffer = 10;*/
 
     [Range(0.1f, 10.0f)]
     public float lerpSpeed = 0.5f;
@@ -31,19 +32,21 @@ public class CameraController : MonoBehaviour
             }
         }
 
-        if (furthest < min)
-        {
-            furthest = min;
-        }
-        else if (furthest > max)
-        {
-            furthest = max;
-        }
+        furthest = Mathf.Clamp(furthest, min, max);
+
+        //if (furthest < min)
+        //{
+        //    furthest = min;
+        //}
+        //else if (furthest > max)
+        //{
+        //    furthest = max;
+        //}
 
         // add correct buffer
         float alpha = furthest / (float)max;
         //Debug.Log(alpha);
-        float buffer = Mathf.Lerp(minBuffer, maxBuffer, alpha);
+        /*float buffer = Mathf.Lerp(minBuffer, maxBuffer, alpha);*/
 
 
         mCamera.orthographicSize = Mathf.Lerp(mCamera.orthographicSize, furthest + buffer, Time.deltaTime);

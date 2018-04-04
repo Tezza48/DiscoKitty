@@ -36,6 +36,11 @@ public class TouchInputHelper : MonoBehaviour
                     }
                     break;
                 case TouchPhase.Stationary:
+                    if (touchMap.ContainsKey(touch.fingerId))
+                    {
+                        obj = touchMap[touch.fingerId];
+                        obj.SendMessage("StationaryTouchInput", touch);
+                    }
                     break;
                 case TouchPhase.Ended:
                     if (touchMap.ContainsKey(touch.fingerId))
