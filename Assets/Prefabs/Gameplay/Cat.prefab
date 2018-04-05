@@ -566,6 +566,7 @@ MonoBehaviour:
   catCollider: {fileID: 58181560575972292}
   _lineRenderer: {fileID: 120930997581704348}
   laserTransform: {fileID: 4977768483586300}
+  animator: {fileID: 95162747308386926}
 --- !u!114 &114284857522353686
 MonoBehaviour:
   m_ObjectHideFlags: 1
