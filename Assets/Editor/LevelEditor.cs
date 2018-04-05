@@ -53,10 +53,24 @@ public class LevelEditor : EditorWindow
                 EditorGUILayout.LabelField("New File");
 
                 EditorGUILayout.BeginHorizontal();
-
                 bool createNewFile = GUILayout.Button("Create New File", GUILayout.MaxWidth(100.0f));
+
                 EditorGUIUtility.labelWidth = 70.0f;
                 editor_NewFilename = EditorGUILayout.TextField("Filename:", editor_NewFilename, GUILayout.ExpandWidth(true));
+                EditorGUILayout.EndHorizontal();
+                #endregion
+
+                EditorGUILayout.Space();
+
+                #region File Operations
+                EditorGUILayout.LabelField("File Operations");
+
+                editor_LevelFile = (TextAsset)EditorGUILayout.ObjectField(editor_LevelFile, typeof(TextAsset), true);
+
+                EditorGUILayout.BeginHorizontal();
+                bool editor_doSave = GUILayout.Button("Save");
+                bool editor_doLoad = GUILayout.Button("Load");
+                EditorGUILayout.EndHorizontal();
 
                 if (createNewFile)
                 {
@@ -71,21 +85,14 @@ public class LevelEditor : EditorWindow
                         }
                     }
                     AssetDatabase.Refresh();
+
+                    // Put new file in box
+                    editor_LevelFile = Resources.Load<TextAsset>(editor_NewFilename);
+                    // Load the new File
+                    editor_doLoad = true;
                 }
 
-                EditorGUILayout.EndHorizontal();
-                #endregion
-
-                EditorGUILayout.Space();
-
-                #region File Operations
-                EditorGUILayout.LabelField("File Operations");
-
-                editor_LevelFile = (TextAsset)EditorGUILayout.ObjectField(editor_LevelFile, typeof(TextAsset), true);
-
-
-                EditorGUILayout.BeginHorizontal();
-                if (GUILayout.Button("Save"))
+                if (editor_doSave)
                 {
                     GameObject[] LevelObjects = GameObject.FindGameObjectsWithTag("LevelContent");
                     List<LevelData> levelData = new List<LevelData>();            
@@ -142,7 +149,7 @@ public class LevelEditor : EditorWindow
                     UnityEditor.AssetDatabase.Refresh();
                 }
 
-                if ( GUILayout.Button("Load"))
+                if (editor_doLoad)
                 {
                     GameObject[] LevelObjects = GameObject.FindGameObjectsWithTag("LevelContent");
 
@@ -177,7 +184,6 @@ public class LevelEditor : EditorWindow
                         }
                     }
                 }
-                EditorGUILayout.EndHorizontal();
                 #endregion
 
                 break;
