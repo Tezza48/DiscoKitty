@@ -83,13 +83,13 @@ public class Zone: MonoBehaviour
         {
             if (cat.catCollider.IsTouching(zoneCollider))
             {
-                cat.animator.SetBool("CatInDisco", true);
+                cat.GetComponent<Animator>().SetBool("CatInDisco", true);
                 cat.animator.speed = 1.0f;
                 howManyIn++;
             }
             else
             {
-                cat.animator.SetBool("CatInDisco", false);
+                cat.GetComponent<Animator>().SetBool("CatInDisco", false);
                 cat.animator.speed = 1.0f;
             }
         }

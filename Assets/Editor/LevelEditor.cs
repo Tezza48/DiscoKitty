@@ -33,13 +33,14 @@ public class LevelEditor : EditorWindow
     int toolbarTab = 0;
 
     // Level Editor
-    TextAsset levelFile;
-    private string fileName = "";
+    private string editor_NewFilename = "";
+    TextAsset editor_LevelFile;
 
     // Level Order
-    TextAsset levelsFile;
-    int numLevels = 0;
-    TextAsset[] levels = new TextAsset[0];
+    TextAsset order_LevelsFile;
+    int order_NumLevels = 0;
+    TextAsset[] order_LevelFiles = new TextAsset[0];
+    Vector2 order_ScrollPos = new Vector2();
 
     private void OnGUI()
     {
@@ -47,7 +48,7 @@ public class LevelEditor : EditorWindow
 
         switch (toolbarTab)
         {
-            case 0:
+            case 0: // Level Editor
                 #region New File
                 EditorGUILayout.LabelField("New File");
 
@@ -55,12 +56,12 @@ public class LevelEditor : EditorWindow
 
                 bool createNewFile = GUILayout.Button("Create New File", GUILayout.MaxWidth(100.0f));
                 EditorGUIUtility.labelWidth = 70.0f;
-                fileName = EditorGUILayout.TextField("Filename:", fileName, GUILayout.ExpandWidth(true));
+                editor_NewFilename = EditorGUILayout.TextField("Filename:", editor_NewFilename, GUILayout.ExpandWidth(true));
 
                 if (createNewFile)
                 {
                     LevelDataArray data = new LevelDataArray();
-                    string json = EditorJsonUtility.ToJson(data); string finalFile = "Assets/Resources/" + fileName + ".json";
+                    string json = EditorJsonUtility.ToJson(data); string finalFile = "Assets/Resources/" + editor_NewFilename + ".json";
 
                     using (FileStream fs = new FileStream(finalFile, FileMode.Create))
                     {
@@ -80,7 +81,7 @@ public class LevelEditor : EditorWindow
                 #region File Operations
                 EditorGUILayout.LabelField("File Operations");
 
-                levelFile = (TextAsset)EditorGUILayout.ObjectField(levelFile, typeof(TextAsset), true);
+                editor_LevelFile = (TextAsset)EditorGUILayout.ObjectField(editor_LevelFile, typeof(TextAsset), true);
 
 
                 EditorGUILayout.BeginHorizontal();
@@ -128,7 +129,7 @@ public class LevelEditor : EditorWindow
 
                     string json = EditorJsonUtility.ToJson(levelDataArray, true);
 
-                    string finalFile = "Assets/Resources/" + levelFile.name + ".json";
+                    string finalFile = "Assets/Resources/" + editor_LevelFile.name + ".json";
 
                     using (FileStream fs = new FileStream(finalFile, FileMode.Create))
                     {
@@ -153,7 +154,7 @@ public class LevelEditor : EditorWindow
                     //string finalFile = "Assets/Resources/" + fileName;
 
                     LevelDataArray levelData = new LevelDataArray();
-                    TextAsset json = levelFile;
+                    TextAsset json = editor_LevelFile;
                     EditorJsonUtility.FromJsonOverwrite(json.ToString(), levelData);
 
                     LevelDataPrefabs dataPrefabs = GameObject.Find("GameManager").GetComponent<LevelDataPrefabs>();
@@ -180,47 +181,52 @@ public class LevelEditor : EditorWindow
                 #endregion
 
                 break;
-            case 1:
+            case 1: // Level Order
+                // Field for the levels json file
+                order_LevelsFile = (TextAsset)EditorGUILayout.ObjectField(order_LevelsFile, typeof(TextAsset), true);
 
-                levelsFile = (TextAsset)EditorGUILayout.ObjectField(levelsFile, typeof(TextAsset), true);
-
-
+                // Save and load button side by side
                 EditorGUILayout.BeginHorizontal();
-                bool doSave = GUILayout.Button("Save");
-                bool doLoad = GUILayout.Button("Load");
+                    bool doSave = GUILayout.Button("Save");
+                    bool doLoad = GUILayout.Button("Load");
                 EditorGUILayout.EndHorizontal();
 
+                // field to set the number of levels
+                order_NumLevels = EditorGUILayout.IntField("Levels", order_NumLevels);
 
-                numLevels = EditorGUILayout.IntField("Levels", numLevels);
-                if (numLevels > levels.Length)
-                {
-                    Array.Resize(ref levels, numLevels);
-                }
+                // if the numLevels is greater than the length of the level array, make the level array bigger
+                if (order_NumLevels > order_LevelFiles.Length)
+                    Array.Resize(ref order_LevelFiles, order_NumLevels);
 
-                if (numLevels <= 0)
-                {
-                    numLevels = 1;
-                }
+                // Minimum number of levels is 1
+                if (order_NumLevels <= 0)
+                    order_NumLevels = 1;
 
-                for (int i = 0; i < numLevels; i++)
-                {
-                    levels[i] = (TextAsset)EditorGUILayout.ObjectField(levels[i], typeof(TextAsset), true);
-                }
+                // Put a scrollbar next to the level file fields
+                order_ScrollPos = EditorGUILayout.BeginScrollView(order_ScrollPos);
+                    // add a field for each text asset (level file) up to the numLevels number
+                    for (int i = 0; i < order_NumLevels; i++)
+                    {
+                        order_LevelFiles[i] = (TextAsset)EditorGUILayout.ObjectField(order_LevelFiles[i], typeof(TextAsset), true);
+                    }
+                EditorGUILayout.EndScrollView();
 
                 if (doSave)
                 {
+                    // Create a new LevelList object
                     LevelManager.LevelList levelList = new LevelManager.LevelList();
-                    levelList.Levels = new string[numLevels];
-                    for (int i = 0; i < numLevels; i++)
+                    levelList.Levels = new string[order_NumLevels];
+                    for (int i = 0; i < order_NumLevels; i++)
                     {
-                        levelList.Levels[i] = levels[i].name;
+                        // fill the levelList with the names of the level files
+                        levelList.Levels[i] = order_LevelFiles[i].name;
                     }
 
 
                     // Save it to json
                     string json = EditorJsonUtility.ToJson(levelList, true);
 
-                    string finalFile = "Assets/Resources/" + levelsFile.name + ".json";
+                    string finalFile = "Assets/Resources/" + order_LevelsFile.name + ".json";
 
                     using (FileStream fs = new FileStream(finalFile, FileMode.Create))
                     {
@@ -235,14 +241,17 @@ public class LevelEditor : EditorWindow
 
                 if (doLoad)
                 {
+                    // Make a new LevelList object
                     LevelManager.LevelList levelList = new LevelManager.LevelList();
-                    EditorJsonUtility.FromJsonOverwrite(levelsFile.ToString(), levelList);
+                    // Load the json file into the LevelList
+                    EditorJsonUtility.FromJsonOverwrite(order_LevelsFile.ToString(), levelList);
 
-                    numLevels = levelList.Levels.Length;
-                    levels = new TextAsset[numLevels];
-                    for (int i = 0; i < numLevels; i++)
+                    // Update the textAsset array with the contents of the file
+                    order_NumLevels = levelList.Levels.Length;
+                    order_LevelFiles = new TextAsset[order_NumLevels];
+                    for (int i = 0; i < order_NumLevels; i++)
                     {
-                        levels[i] = Resources.Load<TextAsset>(levelList.Levels[i]);
+                        order_LevelFiles[i] = Resources.Load<TextAsset>(levelList.Levels[i]);
                     }
                 }
 
