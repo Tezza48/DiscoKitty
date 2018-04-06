@@ -201,8 +201,10 @@ public class LevelEditor : EditorWindow
                 order_NumLevels = EditorGUILayout.IntField("Levels", order_NumLevels);
 
                 // if the numLevels is greater than the length of the level array, make the level array bigger
-                if (order_NumLevels > order_LevelFiles.Length)
+                if (order_NumLevels != order_LevelFiles.Length)
+                {
                     Array.Resize(ref order_LevelFiles, order_NumLevels);
+                }
 
                 // Minimum number of levels is 1
                 if (order_NumLevels <= 0)
