@@ -1,0 +1,40 @@
+{
+    "Content": [
+        {
+            "PositionAndRotation": {
+                "x": 1.840000033378601,
+                "y": -0.6000000238418579,
+                "z": 0.0
+            },
+            "Type": 0,
+            "Radius": 0.0
+        },
+        {
+            "PositionAndRotation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "Type": 2,
+            "Radius": 1.0
+        },
+        {
+            "PositionAndRotation": {
+                "x": 5.5,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "Type": 3,
+            "Radius": 0.0
+        },
+        {
+            "PositionAndRotation": {
+                "x": -5.5,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "Type": 3,
+            "Radius": 0.0
+        }
+    ]
+}

@@ -7,7 +7,7 @@ public class Zone: MonoBehaviour
 {
     [Header("Setup")]
     public bool isOnUpdate = false;
-    [Range (1.0f, 10.0f)]
+    [Range (1.0f, 20.0f)]
     public float size = 1.0f;
 
     public SpriteRenderer artwork;
@@ -62,7 +62,7 @@ public class Zone: MonoBehaviour
 
         // Set the scale
 
-        float scale = Mathf.Lerp(scaleRanges[zoneSize].x, scaleRanges[zoneSize].y, size / 10.0f);
+        float scale = Mathf.Lerp(scaleRanges[zoneSize].x, scaleRanges[zoneSize].y, size / 20.0f);
 
         artwork.transform.localScale = new Vector3(scale, scale, scale);
 
@@ -84,13 +84,13 @@ public class Zone: MonoBehaviour
             if (cat.catCollider.IsTouching(zoneCollider))
             {
                 cat.GetComponent<Animator>().SetBool("CatInDisco", true);
-                cat.animator.speed = 1.0f;
+                cat.GetComponent<Animator>().speed = 1.0f;
                 howManyIn++;
             }
             else
             {
                 cat.GetComponent<Animator>().SetBool("CatInDisco", false);
-                cat.animator.speed = 1.0f;
+                cat.GetComponent<Animator>().speed = 1.0f;
             }
         }
 

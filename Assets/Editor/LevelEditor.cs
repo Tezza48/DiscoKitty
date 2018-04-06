@@ -210,11 +210,14 @@ public class LevelEditor : EditorWindow
 
                 // Put a scrollbar next to the level file fields
                 order_ScrollPos = EditorGUILayout.BeginScrollView(order_ScrollPos);
-                    // add a field for each text asset (level file) up to the numLevels number
-                    for (int i = 0; i < order_NumLevels; i++)
-                    {
-                        order_LevelFiles[i] = (TextAsset)EditorGUILayout.ObjectField(order_LevelFiles[i], typeof(TextAsset), true);
-                    }
+                // add a field for each text asset (level file) up to the numLevels number
+                for (int i = 0; i < order_NumLevels; i++)
+                {
+                    EditorGUILayout.BeginHorizontal();
+                    EditorGUILayout.LabelField(i.ToString(), GUILayout.Width(20.0f));
+                    order_LevelFiles[i] = (TextAsset)EditorGUILayout.ObjectField(order_LevelFiles[i], typeof(TextAsset), true);
+                    EditorGUILayout.EndHorizontal();
+                }
                 EditorGUILayout.EndScrollView();
 
                 if (doSave)
