@@ -12,6 +12,7 @@ TextureImporter:
     21300010: tumble-weed
     21300012: fence-sides
     21300014: desert-rocks-01
+    21300016: environment-desert_0
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -101,10 +102,10 @@ TextureImporter:
       name: fence-front
       rect:
         serializedVersion: 2
-        x: 455
-        y: 1699
-        width: 1562
-        height: 338
+        x: 397
+        y: 1665
+        width: 1608
+        height: 370
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -196,15 +197,15 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: desert-rocks-01
+      name: environment-desert_0
       rect:
         serializedVersion: 2
-        x: 447
-        y: 1049
-        width: 556
-        height: 488
+        x: 707
+        y: 519
+        width: 567
+        height: 320
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

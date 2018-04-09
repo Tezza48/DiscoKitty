@@ -94,12 +94,12 @@ TextureImporter:
       name: title
       rect:
         serializedVersion: 2
-        x: 18
-        y: 18
-        width: 2015
-        height: 1206
+        x: 109
+        y: 11
+        width: 1850
+        height: 1174
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

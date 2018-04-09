@@ -9,6 +9,10 @@ TextureImporter:
     21300004: circle-shape
     21300006: back-btn
     21300008: level-select-holder
+    21300010: rest-btn
+    21300012: home-btn
+    21300014: mute-body
+    21300016: mute-lines
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -133,7 +137,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1458
-        y: 1526
+        y: 1528
         width: 559
         height: 487
       alignment: 0
@@ -174,10 +178,66 @@ TextureImporter:
       name: level-select-holder
       rect:
         serializedVersion: 2
-        x: 1459
+        x: 1461
         y: 365
         width: 574
         height: 574
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rest-btn
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 113
+        width: 318
+        height: 340
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: home-btn
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 535
+        width: 380
+        height: 390
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mute-body
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 951
+        width: 270
+        height: 380
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mute-lines
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 951
+        width: 226
+        height: 390
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
