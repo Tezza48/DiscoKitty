@@ -152,10 +152,10 @@ TextureImporter:
       name: cat-skate
       rect:
         serializedVersion: 2
-        x: 935
-        y: 1878
-        width: 178
-        height: 161
+        x: 905
+        y: 1877
+        width: 210
+        height: 164
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
