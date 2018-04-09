@@ -16,6 +16,7 @@ TextureImporter:
     21300018: cat-head-02
     21300020: laser-pointer
     21300022: cat-wiskers
+    21300024: cat-inbox
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -229,6 +230,20 @@ TextureImporter:
         height: 216
       alignment: 9
       pivot: {x: 0.25804505, y: 0.49294847}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cat-inbox
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 838
+        width: 310
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
