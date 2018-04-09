@@ -195,10 +195,10 @@ TextureImporter:
       name: cat-face-moving
       rect:
         serializedVersion: 2
-        x: 21
-        y: 1103
-        width: 438
-        height: 150
+        x: 27
+        y: 1099
+        width: 422
+        height: 154
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
