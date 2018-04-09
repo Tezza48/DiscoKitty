@@ -15,6 +15,7 @@ TextureImporter:
     21300016: cat-face-indisco
     21300018: cat-head-02
     21300020: laser-pointer
+    21300022: cat-wiskers
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -138,10 +139,10 @@ TextureImporter:
       name: cat-face-idle
       rect:
         serializedVersion: 2
-        x: 31
-        y: 1376
-        width: 338
-        height: 126
+        x: 1
+        y: 1341
+        width: 474
+        height: 170
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,10 +195,10 @@ TextureImporter:
       name: cat-face-moving
       rect:
         serializedVersion: 2
-        x: 31
-        y: 1211
-        width: 338
-        height: 129
+        x: 21
+        y: 1103
+        width: 438
+        height: 150
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
