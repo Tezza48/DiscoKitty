@@ -9,6 +9,7 @@ TextureImporter:
     21300004: cat-head-03
     21300006: cat-head-04
     21300008: cat-head-05
+    21300010: cat-helmet
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -103,7 +104,7 @@ TextureImporter:
         width: 648
         height: 498
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -117,7 +118,7 @@ TextureImporter:
         width: 558
         height: 496
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -131,7 +132,7 @@ TextureImporter:
         width: 556
         height: 413
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -145,7 +146,7 @@ TextureImporter:
         width: 510
         height: 482
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -159,7 +160,21 @@ TextureImporter:
         width: 554
         height: 512
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cat-helmet
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 651
+        width: 414
+        height: 320
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
