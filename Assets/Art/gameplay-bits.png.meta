@@ -170,10 +170,10 @@ TextureImporter:
       name: box-cat-out
       rect:
         serializedVersion: 2
-        x: 7
-        y: 175
-        width: 794
-        height: 534
+        x: 73
+        y: 211
+        width: 648
+        height: 510
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,10 +184,10 @@ TextureImporter:
       name: box-cat-in
       rect:
         serializedVersion: 2
-        x: 921
-        y: 203
-        width: 976
-        height: 540
+        x: 1063
+        y: 213
+        width: 696
+        height: 502
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
