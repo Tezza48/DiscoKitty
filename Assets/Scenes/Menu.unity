@@ -1258,6 +1258,17 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 114445496533008730, guid: ed154cc9c3f4a1c44a49931c492ee66f,
+        type: 2}
+      propertyPath: DummyButtonPrefab
+      value: 
+      objectReference: {fileID: 1608675542280692, guid: bd30268ce4f1ef44cbe7c7dc90a39fb2,
+        type: 2}
+    - target: {fileID: 114526427868831400, guid: ed154cc9c3f4a1c44a49931c492ee66f,
+        type: 2}
+      propertyPath: m_Spacing.y
+      value: 75
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ed154cc9c3f4a1c44a49931c492ee66f, type: 2}
   m_IsPrefabParent: 0

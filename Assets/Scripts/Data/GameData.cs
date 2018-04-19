@@ -47,6 +47,16 @@ static class GameData
             // else set a new pair
             data.levelData.Add(name, levelData);
         }
+
+        int levelID = LevelManager.Singleton.currentLevelID;
+
+        Debug.Log("ID: " + levelID + ", Highest: " + data.highestLevel);
+
+        if (data.highestLevel < levelID)
+        {
+            data.highestLevel = levelID;
+        }
+
         SaveData(data);
     }
 

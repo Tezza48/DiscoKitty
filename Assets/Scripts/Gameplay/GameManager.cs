@@ -253,7 +253,7 @@ public class GameManager : MonoBehaviour
         mAudio.pitch = 1.0f;
         mAudio.loop = false;
         mAudio.Play();
-
+        
         string levelName = LevelManager.Singleton.levels[LevelManager.Singleton.currentLevelID];
         float playTime = Time.time - levelStartTime;
 

@@ -16,7 +16,7 @@ public class UI_LevelList : MonoBehaviour
     }
 
     public GameObject LevelButtonPrefab;
-
+    public GameObject DummyButtonPrefab;
 
 
     private void Start()
@@ -24,6 +24,11 @@ public class UI_LevelList : MonoBehaviour
         GameSaveData data = GameData.LoadData();
         for(int id = 0; id < LevelManager.Singleton.levels.Length; id++)
         {
+            if (id > data.highestLevel + 1)
+            {
+                Instantiate(DummyButtonPrefab, transform);
+                continue;
+            }
             string levelName = LevelManager.Singleton.levels[id];
 
             UI_LevelButton newButton = Instantiate(LevelButtonPrefab, transform).GetComponent<UI_LevelButton>();
