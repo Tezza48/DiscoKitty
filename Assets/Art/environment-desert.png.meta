@@ -1,11 +1,11 @@
 fileFormatVersion: 2
 guid: ad10bb27317b2654eacf6d18e911b49d
-timeCreated: 1522378840
+timeCreated: 1523964321
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
     21300000: fence-front
-    21300002: cactus
+    21300002: cactus-01
     21300004: shrub-01
     21300006: shrub-02
     21300008: shrub-03
@@ -13,6 +13,7 @@ TextureImporter:
     21300012: fence-sides
     21300014: desert-rocks-01
     21300016: environment-desert_0
+    21300018: cactus-02
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -104,8 +105,8 @@ TextureImporter:
         serializedVersion: 2
         x: 397
         y: 1665
-        width: 1608
-        height: 370
+        width: 1622
+        height: 382
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -113,11 +114,11 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: cactus
+      name: cactus-01
       rect:
         serializedVersion: 2
         x: 23
-        y: 51
+        y: 53
         width: 582
         height: 882
       alignment: 0
@@ -130,10 +131,10 @@ TextureImporter:
       name: shrub-01
       rect:
         serializedVersion: 2
-        x: 643
-        y: 101
+        x: 667
+        y: 1269
         width: 246
-        height: 218
+        height: 216
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -144,8 +145,8 @@ TextureImporter:
       name: shrub-02
       rect:
         serializedVersion: 2
-        x: 959
-        y: 85
+        x: 983
+        y: 1253
         width: 270
         height: 394
       alignment: 0
@@ -158,10 +159,10 @@ TextureImporter:
       name: shrub-03
       rect:
         serializedVersion: 2
-        x: 1302
-        y: 79
+        x: 1326
+        y: 1247
         width: 233
-        height: 186
+        height: 184
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -172,10 +173,10 @@ TextureImporter:
       name: tumble-weed
       rect:
         serializedVersion: 2
-        x: 1553
-        y: 42
+        x: 1577
+        y: 1209
         width: 356
-        height: 333
+        height: 332
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,10 +201,24 @@ TextureImporter:
       name: environment-desert_0
       rect:
         serializedVersion: 2
-        x: 707
-        y: 519
-        width: 567
-        height: 320
+        x: 1439
+        y: 669
+        width: 494
+        height: 264
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cactus-02
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 65
+        width: 428
+        height: 869
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

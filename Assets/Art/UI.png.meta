@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 85285aa79d6f8d04ba335c978ab78a99
-timeCreated: 1522169345
+timeCreated: 1523922301
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -13,6 +13,7 @@ TextureImporter:
     21300012: home-btn
     21300014: mute-body
     21300016: mute-lines
+    21300018: lock-icon
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -123,9 +124,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 1377
-        width: 671
-        height: 671
+        y: 1355
+        width: 693
+        height: 693
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -136,10 +137,10 @@ TextureImporter:
       name: pause-btn
       rect:
         serializedVersion: 2
-        x: 1458
-        y: 1528
-        width: 559
-        height: 487
+        x: 1467
+        y: 1529
+        width: 544
+        height: 480
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,10 +151,10 @@ TextureImporter:
       name: circle-shape
       rect:
         serializedVersion: 2
-        x: 834
-        y: 1411
-        width: 600
-        height: 600
+        x: 811
+        y: 1391
+        width: 646
+        height: 644
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -164,10 +165,10 @@ TextureImporter:
       name: back-btn
       rect:
         serializedVersion: 2
-        x: 1522
-        y: 997
-        width: 471
-        height: 480
+        x: 1501
+        y: 973
+        width: 516
+        height: 524
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -178,10 +179,10 @@ TextureImporter:
       name: level-select-holder
       rect:
         serializedVersion: 2
-        x: 1461
-        y: 365
-        width: 574
-        height: 574
+        x: 1437
+        y: 343
+        width: 611
+        height: 618
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -192,10 +193,10 @@ TextureImporter:
       name: rest-btn
       rect:
         serializedVersion: 2
-        x: 103
-        y: 113
-        width: 318
-        height: 340
+        x: 95
+        y: 107
+        width: 334
+        height: 352
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -206,10 +207,10 @@ TextureImporter:
       name: home-btn
       rect:
         serializedVersion: 2
-        x: 73
-        y: 535
-        width: 380
-        height: 390
+        x: 53
+        y: 513
+        width: 420
+        height: 433
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -220,12 +221,12 @@ TextureImporter:
       name: mute-body
       rect:
         serializedVersion: 2
-        x: 21
-        y: 951
-        width: 270
-        height: 380
+        x: 29
+        y: 949
+        width: 292
+        height: 386
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -234,12 +235,26 @@ TextureImporter:
       name: mute-lines
       rect:
         serializedVersion: 2
-        x: 305
-        y: 951
-        width: 226
-        height: 390
+        x: 347
+        y: 1009
+        width: 248
+        height: 280
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lock-icon
+      rect:
+        serializedVersion: 2
+        x: 1001
+        y: 401
+        width: 416
+        height: 538
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
