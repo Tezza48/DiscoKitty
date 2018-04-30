@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 85285aa79d6f8d04ba335c978ab78a99
-timeCreated: 1525054883
+timeCreated: 1525056432
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -165,10 +165,10 @@ TextureImporter:
       name: back-btn
       rect:
         serializedVersion: 2
-        x: 1501
-        y: 973
-        width: 516
-        height: 524
+        x: 1585
+        y: 1023
+        width: 322
+        height: 436
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,10 +179,10 @@ TextureImporter:
       name: level-select-holder
       rect:
         serializedVersion: 2
-        x: 1437
-        y: 343
-        width: 611
-        height: 618
+        x: 1447
+        y: 371
+        width: 575
+        height: 574
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,10 +193,10 @@ TextureImporter:
       name: rest-btn
       rect:
         serializedVersion: 2
-        x: 95
-        y: 107
-        width: 334
-        height: 352
+        x: 81
+        y: 111
+        width: 340
+        height: 356
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -207,10 +207,10 @@ TextureImporter:
       name: home-btn
       rect:
         serializedVersion: 2
-        x: 53
-        y: 513
-        width: 420
-        height: 433
+        x: 39
+        y: 517
+        width: 426
+        height: 439
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,10 +221,10 @@ TextureImporter:
       name: mute-body
       rect:
         serializedVersion: 2
-        x: 29
-        y: 949
-        width: 292
-        height: 386
+        x: 15
+        y: 955
+        width: 298
+        height: 388
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -236,9 +236,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 347
-        y: 1009
-        width: 248
-        height: 280
+        y: 997
+        width: 214
+        height: 304
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
