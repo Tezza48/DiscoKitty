@@ -14,20 +14,21 @@ public class UI_MainMenu : MonoBehaviour
 
     private void Awake()
     {
-        LandingScreen.SetActive(true);
-        StartScreen.SetActive(false);
-        LevelsScreen.SetActive(false);
+        LandingScreen.SetActive (true);
+        StartScreen.SetActive   (false);
+        LevelsScreen.SetActive  (false);
     }
 
     public void OnClick_PlayMeow()
     {
-        LandingScreen.SetActive(false);
-        StartScreen.SetActive(true);
+        LandingScreen.SetActive (false);
+        StartScreen.SetActive   (true);
     }
     public void OnClick_Levels()
     {
-        StartScreen.SetActive(false);
-        LevelsScreen.SetActive(true);
+        LevelsScreen.SetActive  (true);
+        StartScreen.SetActive   (false);
+        LandingScreen.SetActive (false);
     }
     public void OnClick_Quit()
     {

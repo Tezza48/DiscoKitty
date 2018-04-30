@@ -32,6 +32,24 @@ public class UI_IGM : MonoBehaviour
 
     public void LoadMainMenu()
     {
-        SceneManager.LoadScene(0);
+        StartCoroutine(LoadLevelListMenu());
+    }
+
+    IEnumerator LoadLevelListMenu()
+    {
+        // save current scene
+        Scene currentScene = SceneManager.GetActiveScene();
+        // scene we sill be loading
+        Scene menuScene = SceneManager.GetSceneByBuildIndex(0);
+
+        // load the new scene
+        AsyncOperation loading = SceneManager.LoadSceneAsync(0, LoadSceneMode.Additive);
+        yield return new WaitUntil(() => loading.isDone);
+
+        // when the new scene has finished loading, open the levels menu
+        FindObjectOfType<UI_MainMenu>().OnClick_Levels();
+
+        // unload the original scene
+        SceneManager.UnloadSceneAsync(currentScene);
     }
 }
