@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 85285aa79d6f8d04ba335c978ab78a99
-timeCreated: 1523922301
+timeCreated: 1525054883
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -249,10 +249,10 @@ TextureImporter:
       name: lock-icon
       rect:
         serializedVersion: 2
-        x: 1001
-        y: 401
-        width: 416
-        height: 538
+        x: 489
+        y: 115
+        width: 322
+        height: 382
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
