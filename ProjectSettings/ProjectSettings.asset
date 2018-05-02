@@ -12,7 +12,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: TezzaGames
-  productName: HerdingCatsOnRollerskates
+  productName: DiscoKitty
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 1, g: 0.76470596, b: 0.5803922, a: 1}
@@ -160,7 +160,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.TezzaGames.HerdingCatsOnRollerskates
+    Android: com.TezzaGames.DiscoKitty
     Standalone: com.TezzaGames.HerdingCatsOnRollerskates
   buildNumber: {}
   AndroidBundleVersionCode: 1
