@@ -4,7 +4,9 @@ timeCreated: 1525276513
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: UI_Will_0
+    21300000: finger
+    21300002: UI_Will_1
+    21300004: UI_Will_hand
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -101,15 +103,43 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: UI_Will_0
+      name: finger
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 1784
+        width: 271
+        height: 195
+      alignment: 9
+      pivot: {x: 0.5023499, y: 0.029392026}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: UI_Will_1
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 1792
+        width: 31
+        height: 109
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: UI_Will_hand
       rect:
         serializedVersion: 2
         x: 46
         y: 1634
         width: 271
-        height: 345
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 149
+      alignment: 9
+      pivot: {x: 0.5023499, y: 0.97435623}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
