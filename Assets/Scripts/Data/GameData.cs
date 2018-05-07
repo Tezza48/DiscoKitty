@@ -50,7 +50,7 @@ static class GameData
 
         int levelID = LevelManager.Singleton.currentLevelID;
 
-        Debug.Log("ID: " + levelID + ", Highest: " + data.highestLevel);
+        //Debug.Log("ID: " + levelID + ", Highest: " + data.highestLevel);
 
         if (data.highestLevel < levelID)
         {
@@ -64,6 +64,14 @@ static class GameData
     {
         string json = data.GetSerialized();
         //Debug.Log("Saving\n" + json);
+        File.WriteAllText(Application.persistentDataPath + "/" + FILENAME + EXTENSION, json);
+    }
+    /// <summary>
+    /// Clears the player's progression save, Do not do this unless really sure
+    /// </summary>
+    public static void ClearData()
+    {
+        string json = new GameSaveData().GetSerialized();
         File.WriteAllText(Application.persistentDataPath + "/" + FILENAME + EXTENSION, json);
     }
 }

@@ -19,10 +19,11 @@ public class UI_MainMenu : MonoBehaviour
         LevelsScreen.SetActive  (false);
     }
 
-    public void OnClick_PlayMeow()
+    public void OnClick_StartScreen()
     {
-        LandingScreen.SetActive (false);
         StartScreen.SetActive   (true);
+        LandingScreen.SetActive (false);
+        LevelsScreen.SetActive(false);
     }
     public void OnClick_Levels()
     {

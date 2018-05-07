@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "573760360598",
+    "firebase_url": "https://disco-kitty.firebaseio.com",
+    "project_id": "disco-kitty",
+    "storage_bucket": "disco-kitty.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:573760360598:android:a119b2c9b3f2b52c",
+        "android_client_info": {
+          "package_name": "com.TezzaGames.DiscoKitty"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "573760360598-sr2ch98fhqn4ce12nfcdhkq5ghhkrqbb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCDtMGZAh1jts54ZzFyUF7byso5uiX5HkY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -90,6 +90,11 @@ public class Cat : MonoBehaviour
     {
         _lineRenderer.enabled = true;
         SetLineRendererPositions(transform.position);
+        if (PlayerPrefs.GetInt("firstTouchLogged") == 0)
+        {
+            if (LevelManager.Singleton.currentLevelID == 0) // if this is the first level (should only be if the event hasnt been logged yet)
+                FindObjectOfType<GameManager>().LogFirstCatTouch();
+        }
     }
     void MovedTouchInput(Touch touch)
     {
