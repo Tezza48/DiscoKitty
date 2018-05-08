@@ -96,7 +96,8 @@ public class GameManager : MonoBehaviour
         // Get referance to win screen on the UI
         UI_WinPanel = GameObject.Find("Win Panel");
         // Setup event to fire when the player clicks next level
-        UI_WinPanel.transform.GetChild(1).GetComponent<Button>().onClick.AddListener(LoadNextLevel);
+        // commented out, not sure why i needed this, loadnext level is easy enough to plug right in
+        //UI_WinPanel.transform.GetChild(1).GetComponent<Button>().onClick.AddListener(LoadNextLevel);
         // finally hide it until we need it later
         UI_WinPanel.SetActive(false);
 
@@ -296,6 +297,11 @@ public class GameManager : MonoBehaviour
         };
 
         FirebaseAnalytics.LogEvent("LevelCompleted", parameters);
+    }
+
+    public void ResetLevel()
+    {
+        LevelManager.Singleton.LoadLevel(LevelManager.Singleton.currentLevelID);
     }
 
     public void LoadNextLevel()

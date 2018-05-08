@@ -30,6 +30,11 @@ public class UI_IGM : MonoBehaviour
         isOpen = !isOpen;
     }
 
+    public void ResetLevel ()
+    {
+        LevelManager.Singleton.LoadLevel(LevelManager.Singleton.currentLevelID);
+    }
+
     public void LoadMainMenu()
     {
         StartCoroutine(LoadLevelListMenu());
