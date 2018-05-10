@@ -58,6 +58,7 @@ public class GameManager : MonoBehaviour
     // Scene Referances
     private Zone[] zones;
     private Cat[] cats;
+    public YayEffect yayEffect;
 
     // UI Referances
     private Text currentHoldTimeText;
@@ -279,6 +280,7 @@ public class GameManager : MonoBehaviour
 
         if (playTime < bestTime)
         {
+            yayEffect.Play();
             // player Beat preveous high score
             UI_WinScreenTime.text = "Hi Score!\n" + playTime.ToString("N2");
             // Currently dont cate about the highest level completed

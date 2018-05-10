@@ -1010,6 +1010,11 @@ Prefab:
       propertyPath: spreadCustomCurve.m_RotationOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114725987230767806, guid: e7b6baa0c0f4a7d4c92911a04245e0dd,
+        type: 2}
+      propertyPath: yayEffect
+      value: 
+      objectReference: {fileID: 1860106576}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e7b6baa0c0f4a7d4c92911a04245e0dd, type: 2}
   m_IsPrefabParent: 0
@@ -2840,6 +2845,54 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!1001 &1860106575
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4041472271017268, guid: 5ca39e705051d054b8b859d078d94ecc, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4041472271017268, guid: 5ca39e705051d054b8b859d078d94ecc, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4041472271017268, guid: 5ca39e705051d054b8b859d078d94ecc, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4041472271017268, guid: 5ca39e705051d054b8b859d078d94ecc, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4041472271017268, guid: 5ca39e705051d054b8b859d078d94ecc, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4041472271017268, guid: 5ca39e705051d054b8b859d078d94ecc, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4041472271017268, guid: 5ca39e705051d054b8b859d078d94ecc, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4041472271017268, guid: 5ca39e705051d054b8b859d078d94ecc, type: 2}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 5ca39e705051d054b8b859d078d94ecc, type: 2}
+  m_IsPrefabParent: 0
+--- !u!114 &1860106576 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114575570812203374, guid: 5ca39e705051d054b8b859d078d94ecc,
+    type: 2}
+  m_PrefabInternal: {fileID: 1860106575}
+  m_Script: {fileID: 11500000, guid: 69dc2e660334ba44abe50eeb6ff700a4, type: 3}
 --- !u!1 &1982036926
 GameObject:
   m_ObjectHideFlags: 0
