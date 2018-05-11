@@ -5,7 +5,7 @@ using Firebase.Analytics;
 
 public class SessionLengthTracker : MonoBehaviour
 {
-    private SessionLengthTracker singleton;
+    private static SessionLengthTracker singleton;
     private float startTime;
     private void Start()
     {

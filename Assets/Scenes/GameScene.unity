@@ -1610,6 +1610,21 @@ Prefab:
       propertyPath: m_AnchoredPosition.x
       value: 3.3475266
       objectReference: {fileID: 0}
+    - target: {fileID: 223909940824159640, guid: 79edc6e291c3e074e9ed871490542936,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 223909940824159640, guid: 79edc6e291c3e074e9ed871490542936,
+        type: 2}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 223909940824159640, guid: 79edc6e291c3e074e9ed871490542936,
+        type: 2}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1366841888}
     m_RemovedComponents:
     - {fileID: 114892751727000748, guid: 79edc6e291c3e074e9ed871490542936, type: 2}
     - {fileID: 114034408734533088, guid: 79edc6e291c3e074e9ed871490542936, type: 2}
@@ -2460,6 +2475,11 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!20 &1366841888 stripped
+Camera:
+  m_PrefabParentObject: {fileID: 20979001848610870, guid: 831bfd510a16a4d4c9bd41096eece9ed,
+    type: 2}
+  m_PrefabInternal: {fileID: 1099819932}
 --- !u!1 &1475014569
 GameObject:
   m_ObjectHideFlags: 0

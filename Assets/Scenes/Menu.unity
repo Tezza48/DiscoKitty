@@ -366,7 +366,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4023070252043532, guid: 7a1f746929c813345946a5df2018f5c9, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 1.9
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4023070252043532, guid: 7a1f746929c813345946a5df2018f5c9, type: 2}
       propertyPath: m_LocalPosition.y
@@ -488,7 +488,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4235331570354134, guid: 9a31f3e3faef4664e89fa05bc4ae7b65, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 4.63
+      value: 2.8200004
       objectReference: {fileID: 0}
     - target: {fileID: 4235331570354134, guid: 9a31f3e3faef4664e89fa05bc4ae7b65, type: 2}
       propertyPath: m_LocalPosition.y
@@ -525,6 +525,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9a31f3e3faef4664e89fa05bc4ae7b65, type: 2}
   m_IsPrefabParent: 0
+--- !u!20 &287392118 stripped
+Camera:
+  m_PrefabParentObject: {fileID: 20979001848610870, guid: 831bfd510a16a4d4c9bd41096eece9ed,
+    type: 2}
+  m_PrefabInternal: {fileID: 395831826}
 --- !u!1 &365265885
 GameObject:
   m_ObjectHideFlags: 0
@@ -592,8 +597,8 @@ Canvas:
   m_GameObject: {fileID: 365265885}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 287392118}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -602,7 +607,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5000
   m_TargetDisplay: 0
 --- !u!224 &365265889
 RectTransform:
@@ -686,7 +691,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4643269352278608, guid: 831bfd510a16a4d4c9bd41096eece9ed, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 1.9
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4643269352278608, guid: 831bfd510a16a4d4c9bd41096eece9ed, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1025,7 +1030,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4235331570354134, guid: 9a31f3e3faef4664e89fa05bc4ae7b65, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -0.89
+      value: -2.6999998
       objectReference: {fileID: 0}
     - target: {fileID: 4235331570354134, guid: 9a31f3e3faef4664e89fa05bc4ae7b65, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1450,7 +1455,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4235331570354134, guid: 9a31f3e3faef4664e89fa05bc4ae7b65, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 2.9499998
+      value: 1.1400001
       objectReference: {fileID: 0}
     - target: {fileID: 4235331570354134, guid: 9a31f3e3faef4664e89fa05bc4ae7b65, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1705,41 +1710,10 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 114445496533008730, guid: ed154cc9c3f4a1c44a49931c492ee66f,
-        type: 2}
-      propertyPath: DummyButtonPrefab
-      value: 
-      objectReference: {fileID: 1608675542280692, guid: bd30268ce4f1ef44cbe7c7dc90a39fb2,
-        type: 2}
     - target: {fileID: 114526427868831400, guid: ed154cc9c3f4a1c44a49931c492ee66f,
         type: 2}
-      propertyPath: m_Spacing.y
-      value: 75
-      objectReference: {fileID: 0}
-    - target: {fileID: 114720862590789388, guid: ed154cc9c3f4a1c44a49931c492ee66f,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114720862590789388, guid: ed154cc9c3f4a1c44a49931c492ee66f,
-        type: 2}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114720862590789388, guid: ed154cc9c3f4a1c44a49931c492ee66f,
-        type: 2}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114720862590789388, guid: ed154cc9c3f4a1c44a49931c492ee66f,
-        type: 2}
-      propertyPath: m_Color.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114720862590789388, guid: ed154cc9c3f4a1c44a49931c492ee66f,
-        type: 2}
-      propertyPath: m_Color.r
-      value: 1
+      propertyPath: m_Spacing.x
+      value: 200
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ed154cc9c3f4a1c44a49931c492ee66f, type: 2}
@@ -2053,7 +2027,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1428659352
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2228,7 +2202,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1465741916
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2515,7 +2489,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4235331570354134, guid: 9a31f3e3faef4664e89fa05bc4ae7b65, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0.8599998
+      value: -0.95
       objectReference: {fileID: 0}
     - target: {fileID: 4235331570354134, guid: 9a31f3e3faef4664e89fa05bc4ae7b65, type: 2}
       propertyPath: m_LocalPosition.y

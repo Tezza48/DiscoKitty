@@ -44,7 +44,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LevelButtonPrefab: {fileID: 1076163204683954, guid: 6251da8a309e9fe4bbf7f8dcd0a89d6e,
     type: 2}
-  DummyButtonPrefab: {fileID: 0}
+  DummyButtonPrefab: {fileID: 1608675542280692, guid: bd30268ce4f1ef44cbe7c7dc90a39fb2,
+    type: 2}
 --- !u!114 &114526427868831400
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -65,9 +66,9 @@ MonoBehaviour:
   m_StartCorner: 0
   m_StartAxis: 0
   m_CellSize: {x: 100, y: 100}
-  m_Spacing: {x: 100, y: 100}
+  m_Spacing: {x: 250, y: 250}
   m_Constraint: 1
-  m_ConstraintCount: 6
+  m_ConstraintCount: 5
 --- !u!114 &114720862590789388
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -80,7 +81,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -116,8 +117,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 603.63196, y: 157.71112}
-  m_SizeDelta: {x: 1550.8, y: 733.4588}
+  m_AnchoredPosition: {x: 0, y: -0.000008166018}
+  m_SizeDelta: {x: -54.4, y: 64.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &225643415471364420
 CanvasGroup:

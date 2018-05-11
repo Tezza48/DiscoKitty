@@ -8,10 +8,16 @@ public class UI_LevelButton : MonoBehaviour {
     public UI_LevelList parentElement;
     public Text name;
     public Text time;
+    public MedalDisplay medalDisplay;
     private int levelID;
 
-	// Use this for initialization
-	void Start () {
+
+    private float targetTime1 = 20.0f;
+    private float targetTime2 = 10.0f;
+    private float targetTime3 = 5.0f;
+
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -25,6 +31,22 @@ public class UI_LevelButton : MonoBehaviour {
         levelID = id;
         name.text = (id + 1).ToString();
         time.text = fastestTime > 0.0f ? fastestTime.ToString("N2") : "";
+
+
+        int numMedals = 0;
+        if (fastestTime < targetTime1)
+        {
+            numMedals = 1;
+        }
+        if (fastestTime < targetTime2)
+        {
+            numMedals = 2;
+        }
+        if (fastestTime < targetTime3)
+        {
+            numMedals = 3;
+        }
+        medalDisplay.ShowMedals(numMedals);
     }
 
     public void OnClick()
