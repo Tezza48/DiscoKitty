@@ -7,6 +7,7 @@ TextureImporter:
     21300000: finger
     21300002: UI_Will_1
     21300004: UI_Will_hand
+    21300006: UI_Will_0
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -140,6 +141,20 @@ TextureImporter:
         height: 149
       alignment: 9
       pivot: {x: 0.5023499, y: 0.97435623}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: UI_Will_0
+      rect:
+        serializedVersion: 2
+        x: 681
+        y: 1654
+        width: 294
+        height: 294
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

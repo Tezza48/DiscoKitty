@@ -75,6 +75,13 @@ public class GameManager : MonoBehaviour
     public float musTempoIdle = 1.0f;
     public float musTempoFinish = 2.0f;
 
+    // completion times to get 1, 2 or 3 medals
+    private float targetTime1 = 20.0f;
+    private float targetTime2 = 10.0f;
+    private float targetTime3 = 5.0f;
+
+    public MedalDisplay medalDisplay;
+
     private float levelStartTime;
 
     private ELevelState levelState = ELevelState.Idle;
@@ -291,6 +298,22 @@ public class GameManager : MonoBehaviour
             UI_WinScreenTime.text = playTime.ToString("N2");
         }
 
+        // display medals  for the time
+        int numMedals = 0;
+        if (playTime < targetTime1)
+        {
+            numMedals = 1;
+        }
+        if (playTime < targetTime2)
+        {
+            numMedals = 2;
+        }
+        if (playTime < targetTime3)
+        {
+            numMedals = 3;
+        }
+
+        medalDisplay.ShowMedals(numMedals);
 
         // log an analytics event saying the level name and completion time
         Parameter[] parameters = new Parameter[] {
