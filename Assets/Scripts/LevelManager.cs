@@ -6,15 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
-    public enum ObjectType
-    {
-        Cat,
-        Pickle,
-        Zone,
-        Box,
-        None
-    }
-
     [System.Serializable]
     public class LevelList
     {
@@ -26,24 +17,16 @@ public class LevelManager : MonoBehaviour
     }
 
     [System.Serializable]
-    public class LevelData
-    {
-        public Vector3 PositionAndRotation;
-        public ObjectType Type;
-        public float Radius;
-    }
-
-    [System.Serializable]
     public class LevelDataArray
     {
-        public LevelData[] Content;
+        public LevelEntity[] Content;
 
         public LevelDataArray()
         {
-            Content = new LevelData[0];
+            Content = new LevelEntity[0];
         }
 
-        public LevelDataArray(LevelData[] data)
+        public LevelDataArray(LevelEntity[] data)
         {
             Content = data;
         }
@@ -98,12 +81,12 @@ public class LevelManager : MonoBehaviour
         LoadLevel(currentLevelID + 1);
     }
 
-    internal IEnumerator StartNewLevel(LevelData[] data)
+    internal IEnumerator StartNewLevel(LevelEntity[] data)
     {
-        AsyncOperation load = SceneManager.LoadSceneAsync("GameScene", LoadSceneMode.Single);
-            
-        yield return new WaitUntil(() => load.isDone);
+		AsyncOperation load = SceneManager.LoadSceneAsync("GameScene", LoadSceneMode.Single);
+		Debug.LogWarning("Function Currently not Operational due to refactoring");
+		yield return new WaitUntil(() => load.isDone);
 
-        FindObjectOfType<GameManager>().InstantiateLevel(data);
+        //FindObjectOfType<GameManager>().InstantiateLevel(data);
     }
 }

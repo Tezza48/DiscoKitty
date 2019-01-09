@@ -1,11 +1,11 @@
 fileFormatVersion: 2
 guid: d12ff510b928897448f9f3bfbc92a695
-timeCreated: 1522151958
-licenseType: Free
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - m_PersistentViewDataDictionary: {instanceID: 0}
+  - EntityTexture: {fileID: 2800000, guid: 8b14b3f343b5d944b973b266b56c3cbe, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
