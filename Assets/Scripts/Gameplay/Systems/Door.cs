@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Door : MonoBehaviour {
-	private bool isOpen = false;
+	private int inputs = 0;
 	public Transform doorHolder;
 
 	// Use this for initialization
@@ -13,7 +13,7 @@ public class Door : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (isOpen) {
+		if (inputs > 0) {
 			doorHolder.localScale = Vector2.Lerp(doorHolder.localScale, new Vector2(0.1f, 1.0f), Time.deltaTime);
 		} else {
 			doorHolder.localScale = Vector2.Lerp(doorHolder.localScale, new Vector2(1.0f, 1.0f), Time.deltaTime);
@@ -22,10 +22,10 @@ public class Door : MonoBehaviour {
 	}
 
 	public void Open() {
-		isOpen = true;
+		inputs++;
 	}
 
 	public void Close() {
-		isOpen = false;
+		inputs--;
 	}
 }
