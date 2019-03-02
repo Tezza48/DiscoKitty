@@ -7,6 +7,14 @@ public class CameraTracked : MonoBehaviour
 
     private static List<CameraTracked> EnabledObjects;
 
+    public CameraTracked()
+    {
+        if (EnabledObjects == null)
+        {
+            EnabledObjects = new List<CameraTracked>();
+        }
+    }
+
     public static List<CameraTracked> GetEnabledCameraTracked()
     {
         return EnabledObjects;
@@ -14,10 +22,6 @@ public class CameraTracked : MonoBehaviour
 
     private void Awake()
     {
-        if (EnabledObjects == null)
-        {
-            EnabledObjects = new List<CameraTracked>();
-        }
     }
 
     private void OnEnable()
