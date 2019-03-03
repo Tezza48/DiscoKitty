@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
+    public bool isStationary = true;
     public float min = 5, max = 50;
     public float buffer = 2.0f;
     /*public float minBuffer = 1, maxBuffer = 10;*/
@@ -22,34 +23,31 @@ public class CameraController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // find furthest out cat
+        var tracked = CameraTracked.GetEnabledCameraTracked();
+
+        // find the average position it not stationary
+        Vector2 avereagePosition = Vector2.zero;
+        foreach (var item in tracked)
+            avereagePosition += (Vector2)item.transform.position;
+        avereagePosition /= tracked.Count;
+            
+        if (!isStationary)
+            transform.position = new Vector3(avereagePosition.x, avereagePosition.y, transform.position.z);
+
+
+        // find furthest out tracked item
         float furthest = 0.0f;
-        foreach (var item in CameraTracked.GetEnabledCameraTracked())
+        foreach (var item in tracked)
         {
             if (item.transform.position.magnitude > furthest)
             {
-                furthest = (int)item.transform.position.magnitude;
+                furthest = ((Vector2)item.transform.position - (Vector2)transform.position).magnitude;
             }
         }
-
         furthest = Mathf.Clamp(furthest, min, max);
-
-        //if (furthest < min)
-        //{
-        //    furthest = min;
-        //}
-        //else if (furthest > max)
-        //{
-        //    furthest = max;
-        //}
 
         // add correct buffer
         float alpha = furthest / (float)max;
-        //Debug.Log(alpha);
-        /*float buffer = Mathf.Lerp(minBuffer, maxBuffer, alpha);*/
-
-
         mCamera.orthographicSize = Mathf.Lerp(mCamera.orthographicSize, furthest + buffer, Time.deltaTime);
-
     }
 }
