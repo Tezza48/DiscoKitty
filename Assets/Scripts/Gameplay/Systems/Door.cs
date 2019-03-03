@@ -6,6 +6,8 @@ public class Door : MonoBehaviour {
 	private int inputs = 0;
 	public Transform doorHolder;
 
+	private float openProgress = 0.0f;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -13,12 +15,10 @@ public class Door : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (inputs > 0) {
-			doorHolder.localScale = Vector2.Lerp(doorHolder.localScale, new Vector2(0.1f, 1.0f), Time.deltaTime);
-		} else {
-			doorHolder.localScale = Vector2.Lerp(doorHolder.localScale, new Vector2(1.0f, 1.0f), Time.deltaTime);
-
-		}
+		openProgress += inputs > 0 ? Time.deltaTime : - Time.deltaTime;
+		openProgress = Mathf.Clamp01(openProgress);
+		
+		doorHolder.localScale = Vector2.Lerp(new Vector2(1.0f, 1.0f), new Vector2(0.1f, 1.0f), openProgress);
 	}
 
 	public void Open() {

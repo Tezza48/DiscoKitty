@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Button : MonoBehaviour {
 	private float isDown;
-	public Door door;
+	public Door[] doors;
 	// Use this for initialization
 	void Start () {
 		
@@ -16,11 +16,12 @@ public class Button : MonoBehaviour {
 	}
 
 	public void OnTriggerEnter2D(Collider2D collider) {
-		Debug.Log(collider.name);
-		door.Open();
+		foreach (var door in doors)
+			door.Open();
 	}
 
 	public void OnTriggerExit2D(Collider2D collider) {
-		door.Close();
+		foreach (var door in doors)
+			door.Close();
 	}
 }
