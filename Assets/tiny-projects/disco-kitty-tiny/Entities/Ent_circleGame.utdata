@@ -1,42 +1,44 @@
 ﻿[{
     "$TypeId": 4,
     "Id": "e17b754275b34316b1d7b48ae673c651",
-    "Name": "NewEntityGroup",
+    "Name": "Ent_circleGame",
     "ExportFlags": 0,
     "SerializedVersion": 0,
     "Entities": [
-        { "$TypeId": 9, "Id": "aeeca08e22224f20932c478d6d27500a", "Name": "Camera" }
+        { "$TypeId": 9, "Id": "9dd3c8a5142d44bb9da2fb18f914e49f", "Name": "Sprite" }
     ]
 },
 {
     "$TypeId": 5,
-    "Id": "aeeca08e22224f20932c478d6d27500a",
-    "Name": "Camera",
+    "Id": "9dd3c8a5142d44bb9da2fb18f914e49f",
+    "Name": "Sprite",
     "Enabled": true,
     "Static": false,
     "Layer": 0,
     "Components": [{
         "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" }
     }, {
-        "Type": { "Id": "12692383f3fef3bb74c209888c5b0939", "Name": "Camera2D" },
+        "Type": { "Id": "70449d66178e0d9f66795c24f0fbbdfc", "Name": "TransformLocalPosition" }
+    }, {
+        "Type": { "Id": "2266a95f5d16ca1ddde710d7c047ba69", "Name": "TransformLocalRotation" }
+    }, {
+        "Type": { "Id": "f11fe490eefc969bbc3fde5eab5ccd1e", "Name": "TransformLocalScale" },
         "Properties": {
-            "backgroundColor": {
-                "Type": { "Id": "2a90a1633d6dc16cd37cdfaca7b93cea", "Name": "Color" },
+            "scale": {
+                "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
                 "Properties": {
-                    "r": 0,
-                    "g": 0,
-                    "b": 0,
-                    "a": 1
+                    "x": 0.2,
+                    "y": 0.2,
+                    "z": 0.2
                 }
-            },
-            "clearFlags": {
-                "$TypeId": 8,
-                "Type": { "Id": "76a06ddd38e99125d930e77c6a287872", "Name": "CameraClearFlags" },
-                "Id": "9faedc246f34513076701ef66b5ad74f",
-                "Name": "SolidColor",
-                "Value": 1
-            },
-            "depth": -1
+            }
         }
+    }, {
+        "Type": { "Id": "1c504a8a7963db0d32e89b527b90e057", "Name": "Sprite2DRenderer" },
+        "Properties": {
+            "sprite": { "$TypeId": 10, "Guid": "114425b9fdec67048827508e096858ed", "FileId": 21300000, "Type": 3 }
+        }
+    }, {
+        "Type": { "Id": "efacbac72355475c9c3ea7c2261915cb", "Name": "moveToPointerComponent" }
     }]
 }]
