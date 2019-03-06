@@ -1,0 +1,12 @@
+﻿[{
+    "$TypeId": 3,
+    "Id": "efacbac72355475c9c3ea7c2261915cb",
+    "Name": "moveToPointer",
+    "ExportFlags": 0,
+    "Unlisted": false,
+    "Visibility": 0,
+    "TypeCode": "Component",
+    "DefaultValue": {
+        "Type": { "Id": "efacbac72355475c9c3ea7c2261915cb", "Name": "moveToPointer" }
+    }
+}]

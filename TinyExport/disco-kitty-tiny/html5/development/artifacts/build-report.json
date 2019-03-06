@@ -1,0 +1,107 @@
+﻿{
+    "Item": {
+        "Name": "Project",
+        "Size": 0,
+        "CompressedSize": 0
+    },
+    "Children": [{
+        "Item": {
+            "Name": "Runtime",
+            "Size": 0,
+            "CompressedSize": 0
+        },
+        "Children": [{
+            "Item": {
+                "Name": "TinyExport/disco-kitty-tiny/html5/development/build/runtime.js",
+                "Size": 5664364,
+                "CompressedSize": 700818
+            }
+        }]
+    }, {
+        "Item": {
+            "Name": "Assets",
+            "Size": 0,
+            "CompressedSize": 0
+        },
+        "Children": [{
+            "Item": {
+                "Name": "JavaScript",
+                "Size": 1905,
+                "CompressedSize": 0
+            }
+        }, {
+            "Item": {
+                "Name": "Assets/images/social-icon.png",
+                "Size": 0,
+                "CompressedSize": 0,
+                "Object": { "$TypeId": 10, "Guid": "114425b9fdec67048827508e096858ed", "FileId": 2800000, "Type": 3 }
+            },
+            "Children": [{
+                "Item": {
+                    "Name": "TinyExport/disco-kitty-tiny/html5/development/artifacts/assets/social-icon.jpg",
+                    "Size": 145680,
+                    "CompressedSize": 47487,
+                    "Object": { "$TypeId": 10, "Guid": "114425b9fdec67048827508e096858ed", "FileId": 2800000, "Type": 3 }
+                }
+            }, {
+                "Item": {
+                    "Name": "TinyExport/disco-kitty-tiny/html5/development/artifacts/assets/social-icon_a.png",
+                    "Size": 106444,
+                    "CompressedSize": 42296,
+                    "Object": { "$TypeId": 10, "Guid": "114425b9fdec67048827508e096858ed", "FileId": 2800000, "Type": 3 }
+                }
+            }]
+        }]
+    }, {
+        "Item": {
+            "Name": "Code",
+            "Size": 0,
+            "CompressedSize": 0
+        },
+        "Children": [{
+            "Item": {
+                "Name": "TinyExport/disco-kitty-tiny/html5/development/build/entities.js",
+                "Size": 2674,
+                "CompressedSize": 874
+            },
+            "Children": [{
+                "Item": {
+                    "Name": "Ent_circleGame",
+                    "Size": 2586,
+                    "CompressedSize": 794
+                }
+            }]
+        }, {
+            "Item": {
+                "Name": "TinyExport/disco-kitty-tiny/html5/development/build/bindings.js",
+                "Size": 73815,
+                "CompressedSize": 5821
+            }
+        }, {
+            "Item": {
+                "Name": "Linked Code Files",
+                "Size": 0,
+                "CompressedSize": 0
+            },
+            "Children": [{
+                "Item": {
+                    "Name": "TinyExport/disco-kitty-tiny/html5/development/artifacts/scripts/tsc-emit.js",
+                    "Size": 5093,
+                    "CompressedSize": 1508
+                }
+            }]
+        }, {
+            "Item": {
+                "Name": "TinyExport/disco-kitty-tiny/html5/development/build/main.js",
+                "Size": 2227,
+                "CompressedSize": 788
+            }
+        }, {
+            "Item": {
+                "Name": "TinyExport/disco-kitty-tiny/html5/development/build/wsclient.js",
+                "Size": 9651,
+                "CompressedSize": 2635
+            }
+        }]
+    }]
+}
