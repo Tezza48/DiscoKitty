@@ -2,8 +2,17 @@
     "Content": [
         {
             "PositionAndRotation": {
-                "x": 1.840000033378601,
-                "y": -0.6000000238418579,
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "Type": 2,
+            "Radius": 5.5
+        },
+        {
+            "PositionAndRotation": {
+                "x": -4.0,
+                "y": 0.09000000357627869,
                 "z": 0.0
             },
             "Type": 0,
@@ -11,29 +20,11 @@
         },
         {
             "PositionAndRotation": {
-                "x": 0.0,
-                "y": 0.0,
+                "x": 4.329999923706055,
+                "y": 0.05000000074505806,
                 "z": 0.0
             },
-            "Type": 2,
-            "Radius": 1.0
-        },
-        {
-            "PositionAndRotation": {
-                "x": 5.5,
-                "y": 0.0,
-                "z": 0.0
-            },
-            "Type": 3,
-            "Radius": 0.0
-        },
-        {
-            "PositionAndRotation": {
-                "x": -5.5,
-                "y": 0.0,
-                "z": 0.0
-            },
-            "Type": 3,
+            "Type": 0,
             "Radius": 0.0
         }
     ]
