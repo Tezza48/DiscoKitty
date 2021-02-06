@@ -2,17 +2,11 @@
     "Levels": [
         "Easy_1CatBigCircle",
         "Easy_SmallCircle",
-        "Easy_BoxIntro",
-        "cats2circles1",
         "cats2circles2",
-        "2CirclesAndBox",
+        "Easy_BoxIntro",
         "Easy_PickleIntro",
-        "cats2circles1pickles2",
-        "cats2circles4",
-        "cats1circles3",
         "cats3circles1",
         "cats4circles2",
-        "cats3circles1small",
         "cats3circles2",
         "cats2circles2small",
         "cats3circles2skew",
@@ -20,7 +14,6 @@
         "Easy_PickleAndBox",
         "cats2circles2pickles1",
         "cats2circles2pickles2",
-        "cats2circles2pickles1",
         "cats3circles3pickles1",
         "cats9circles1"
     ]

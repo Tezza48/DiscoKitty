@@ -52,10 +52,7 @@ static class GameData
 
         //Debug.Log("ID: " + levelID + ", Highest: " + data.highestLevel);
 
-        if (data.highestLevel < levelID)
-        {
-            data.highestLevel = levelID;
-        }
+        data.highestLevel = Mathf.Max(data.highestLevel, levelID);
 
         SaveData(data);
     }

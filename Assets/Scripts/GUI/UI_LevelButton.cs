@@ -26,7 +26,7 @@ public class UI_LevelButton : MonoBehaviour {
 		
 	}
 
-    public void Init(int id, float fastestTime, bool unlocked)
+    public void Init(int id, float fastestTime)
     {
         levelID = id;
         name.text = (id + 1).ToString();

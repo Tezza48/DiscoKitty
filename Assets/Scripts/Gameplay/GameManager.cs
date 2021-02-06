@@ -261,7 +261,11 @@ public class GameManager : MonoBehaviour
         mAudio.clip = musTadaa;
         mAudio.pitch = 1.0f;
         mAudio.loop = false;
-        mAudio.Play();
+
+        if (mAudio.enabled)
+        {
+            mAudio.Play();
+        }
         
         string levelName = LevelManager.Singleton.levels[LevelManager.Singleton.currentLevelID];
         float playTime = Time.time - levelStartTime;
@@ -298,21 +302,21 @@ public class GameManager : MonoBehaviour
         }
 
         // display medals  for the time
-        int numMedals = 0;
-        if (playTime < targetTime1)
-        {
-            numMedals = 1;
-        }
-        if (playTime < targetTime2)
-        {
-            numMedals = 2;
-        }
-        if (playTime < targetTime3)
-        {
-            numMedals = 3;
-        }
+        //int numMedals = 0;
+        //if (playTime < targetTime1)
+        //{
+        //    numMedals = 1;
+        //}
+        //if (playTime < targetTime2)
+        //{
+        //    numMedals = 2;
+        //}
+        //if (playTime < targetTime3)
+        //{
+        //    numMedals = 3;
+        //}
 
-        medalDisplay.ShowMedals(numMedals);
+        //medalDisplay.ShowMedals(numMedals);
     }
 
     public void ResetLevel()
