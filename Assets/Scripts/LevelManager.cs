@@ -78,6 +78,7 @@ public class LevelManager : MonoBehaviour
 
     internal void LoadLevel(int levelID)
     {
+        Debug.Log("level: " + levelID + " " + levels[levelID]);
         currentLevelID = levelID;
         LevelDataArray levelData = new LevelDataArray();
         TextAsset levelJson = Resources.Load<TextAsset>(levels[currentLevelID]);
