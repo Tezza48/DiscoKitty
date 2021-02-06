@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,6 +6,8 @@ using UnityEngine;
 public class GravityActor : MonoBehaviour
 {
     public bool canMove;
+
+    static List<GravityActor> EnabledGravityActors;
 
     Rigidbody2D _rigid;
 
@@ -17,6 +19,26 @@ public class GravityActor : MonoBehaviour
     private void Awake()
     {
         _rigid = GetComponent<Rigidbody2D>();
+        if (EnabledGravityActors == null)
+        {
+            EnabledGravityActors = new List<GravityActor>();
+        }
+    }
+
+    private void OnEnable()
+    {
+        EnabledGravityActors.Add(this);
+    }
+
+    private void OnDisable()
+    {
+        EnabledGravityActors.Remove(this);
+    }
+
+    // Use this for initialization
+    void Start()
+    {
+
     }
 
     // Update is called once per frame
@@ -31,7 +53,7 @@ public class GravityActor : MonoBehaviour
         {
             Vector2 force = new Vector2();
             float distance = 0.0f;
-            foreach (GravityActor item in FindObjectsOfType<GravityActor>())
+            foreach (GravityActor item in EnabledGravityActors)
             {
                 if (item != this)
                 {

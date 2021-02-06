@@ -24,7 +24,7 @@ public class CameraController : MonoBehaviour
     {
         // find furthest out cat
         float furthest = 0.0f;
-        foreach (var item in FindObjectsOfType<CameraTracked>())
+        foreach (var item in CameraTracked.GetEnabledCameraTracked())
         {
             if (item.transform.position.magnitude > furthest)
             {
@@ -33,6 +33,20 @@ public class CameraController : MonoBehaviour
         }
 
         furthest = Mathf.Clamp(furthest, min, max);
+
+        //if (furthest < min)
+        //{
+        //    furthest = min;
+        //}
+        //else if (furthest > max)
+        //{
+        //    furthest = max;
+        //}
+
+        // add correct buffer
+        float alpha = furthest / (float)max;
+        //Debug.Log(alpha);
+        /*float buffer = Mathf.Lerp(minBuffer, maxBuffer, alpha);*/
 
 
         mCamera.orthographicSize = Mathf.Lerp(mCamera.orthographicSize, furthest + buffer, Time.deltaTime);

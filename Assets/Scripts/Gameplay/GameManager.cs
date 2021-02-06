@@ -325,6 +325,7 @@ public class GameManager : MonoBehaviour
         //Debug.Log("Trying to load next level");
         LevelManager.Singleton.LoadNextLevel();
     }
+
     public void LogFirstCatTouch()
     {
     }

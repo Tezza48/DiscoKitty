@@ -362,7 +362,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1469218647774946}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -2.79, y: -1.66, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4977768483586300}
@@ -611,15 +611,15 @@ MonoBehaviour:
   mRigid: {fileID: 50544737916050890}
   mAudioSource: {fileID: 0}
   legs:
-  - {fileID: 4052147541201088}
-  - {fileID: 4173686932202124}
-  - {fileID: 4696110328670952}
-  - {fileID: 4520715374787950}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   feet:
-  - {fileID: 4961479298386952}
-  - {fileID: 4166606003917692}
-  - {fileID: 4921964186240830}
-  - {fileID: 4103481934379234}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   directions:
   - {x: -1, y: 1}
   - {x: 1, y: 1}
