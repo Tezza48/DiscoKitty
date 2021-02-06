@@ -1,10 +1,9 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using Firebase.Analytics;
 //using UObject = UnityEngine.Object;
 //using UnityEngine.Analytics;
 
@@ -262,7 +261,11 @@ public class GameManager : MonoBehaviour
         mAudio.clip = musTadaa;
         mAudio.pitch = 1.0f;
         mAudio.loop = false;
-        mAudio.Play();
+
+        if (mAudio.enabled)
+        {
+            mAudio.Play();
+        }
         
         string levelName = LevelManager.Singleton.levels[LevelManager.Singleton.currentLevelID];
         float playTime = Time.time - levelStartTime;
@@ -299,29 +302,21 @@ public class GameManager : MonoBehaviour
         }
 
         // display medals  for the time
-        int numMedals = 0;
-        if (playTime < targetTime1)
-        {
-            numMedals = 1;
-        }
-        if (playTime < targetTime2)
-        {
-            numMedals = 2;
-        }
-        if (playTime < targetTime3)
-        {
-            numMedals = 3;
-        }
+        //int numMedals = 0;
+        //if (playTime < targetTime1)
+        //{
+        //    numMedals = 1;
+        //}
+        //if (playTime < targetTime2)
+        //{
+        //    numMedals = 2;
+        //}
+        //if (playTime < targetTime3)
+        //{
+        //    numMedals = 3;
+        //}
 
-        medalDisplay.ShowMedals(numMedals);
-
-        // log an analytics event saying the level name and completion time
-        Parameter[] parameters = new Parameter[] {
-            new Parameter("levelName", levelName),
-            new Parameter("time", playTime)
-        };
-
-        FirebaseAnalytics.LogEvent("LevelCompleted", parameters);
+        //medalDisplay.ShowMedals(numMedals);
     }
 
     public void ResetLevel()
@@ -337,10 +332,5 @@ public class GameManager : MonoBehaviour
 
     public void LogFirstCatTouch()
     {
-        // send a firebase event if this is the first level
-        // saying how long it was before the player touched the cat
-        FirebaseAnalytics.LogEvent("FirstTouch", "timeTaken", Time.time - levelStartTime);
-        // then set a playerprefs key saying the event has been logged so it only gets fired once per player
-        PlayerPrefs.SetInt("firstTouchLogged", 1);
     }
 }

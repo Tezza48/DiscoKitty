@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class UI_LevelButton : MonoBehaviour {
 
     public UI_LevelList parentElement;
-    public Text name;
+    new public Text name;
     public Text time;
     public MedalDisplay medalDisplay;
     private int levelID;
@@ -26,7 +26,7 @@ public class UI_LevelButton : MonoBehaviour {
 		
 	}
 
-    public void Init(int id, float fastestTime, bool unlocked)
+    public void Init(int id, float fastestTime)
     {
         levelID = id;
         name.text = (id + 1).ToString();

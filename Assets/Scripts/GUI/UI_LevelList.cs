@@ -29,6 +29,7 @@ public class UI_LevelList : MonoBehaviour
                 Instantiate(DummyButtonPrefab, transform);
                 continue;
             }
+
             string levelName = LevelManager.Singleton.levels[id];
 
             UI_LevelButton newButton = Instantiate(LevelButtonPrefab, transform).GetComponent<UI_LevelButton>();
@@ -43,8 +44,7 @@ public class UI_LevelList : MonoBehaviour
             }
 
             // Initialize the button with player's data too
-            bool isUnlocked = data.highestLevel > id;
-            newButton.Init(id, completionTime, isUnlocked);
+            newButton.Init(id, completionTime);
             //newButton.transform.GetChild(0).GetComponent<Text>().text = (id+1).ToString();
         }
     }
