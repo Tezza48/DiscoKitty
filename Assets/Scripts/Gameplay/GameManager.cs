@@ -75,9 +75,9 @@ public class GameManager : MonoBehaviour
     public float musTempoFinish = 2.0f;
 
     // completion times to get 1, 2 or 3 medals
-    private float targetTime1 = 20.0f;
-    private float targetTime2 = 10.0f;
-    private float targetTime3 = 5.0f;
+    //private float targetTime1 = 20.0f;
+    //private float targetTime2 = 10.0f;
+    //private float targetTime3 = 5.0f;
 
     public MedalDisplay medalDisplay;
 

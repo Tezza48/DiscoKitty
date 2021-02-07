@@ -11,12 +11,14 @@ public class UI_MainMenu : MonoBehaviour
     public GameObject LandingScreen;
     public GameObject StartScreen;
     public GameObject LevelsScreen;
+    public GameObject SettingsScreen;
 
     private void Awake()
     {
         LandingScreen.SetActive (true);
         StartScreen.SetActive   (false);
-        LevelsScreen.SetActive  (false);
+        LevelsScreen.SetActive(false);
+        SettingsScreen.SetActive(false);
     }
 
     public void OnClick_StartScreen()
@@ -24,12 +26,21 @@ public class UI_MainMenu : MonoBehaviour
         StartScreen.SetActive   (true);
         LandingScreen.SetActive (false);
         LevelsScreen.SetActive(false);
+        SettingsScreen.SetActive(false);
     }
     public void OnClick_Levels()
     {
-        LevelsScreen.SetActive  (true);
-        StartScreen.SetActive   (false);
-        LandingScreen.SetActive (false);
+        LevelsScreen.SetActive(true);
+        StartScreen.SetActive(false);
+        LandingScreen.SetActive(false);
+        SettingsScreen.SetActive(false);
+    }
+    public void OnClick_Settings()
+    {
+        LevelsScreen.SetActive(false);
+        StartScreen.SetActive(false);
+        LandingScreen.SetActive(false);
+        SettingsScreen.SetActive(true);
     }
     public void OnClick_Quit()
     {
