@@ -81,7 +81,6 @@ public class Cat : MonoBehaviour
             targetPoint += new Vector2(0.0f, 1.0f);
         }
 
-        Debug.Log("Drag Offset: " + SettingsHelper.PointerDragOffsetEnabled);
         //Debug.DrawLine(mouseWorldPos, transform.position);
         _rigid.AddForce((targetPoint - (Vector2)transform.position) * dragForce, ForceMode2D.Force);
         SetLineRendererPositions(targetPoint);
@@ -111,8 +110,6 @@ public class Cat : MonoBehaviour
         {
             targetPoint += new Vector2(0.0f, 1.0f);
         }
-
-        Debug.Log("Drag Offset: " + SettingsHelper.PointerDragOffsetEnabled);
 
         //Debug.DrawLine(touchWorldPos, transform.position);
         _rigid.AddForce((targetPoint - (Vector2)transform.position) * dragForce, ForceMode2D.Force);

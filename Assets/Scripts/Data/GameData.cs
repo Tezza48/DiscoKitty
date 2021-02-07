@@ -13,7 +13,7 @@ static class GameData
     public static GameSaveData LoadData()
     {
         string path = Application.persistentDataPath + "/" + FILENAME + EXTENSION;
-        Debug.Log("Path: " + path);
+
         //Debug.Log(path);
         if (File.Exists(path))
         {
