@@ -13,10 +13,12 @@ public class UI_IGM : MonoBehaviour
 
     public Vector2 open, closed;
 
+    public GameObject settingsDialog;
+
     // Use this for initialization
     void Start()
     {
-
+        settingsDialog.SetActive(false);
     }
 
     // Update is called once per frame
@@ -38,6 +40,17 @@ public class UI_IGM : MonoBehaviour
     public void LoadMainMenu()
     {
         StartCoroutine(LoadLevelListMenu());
+    }
+
+    public void OnClick_Settings()
+    {
+        settingsDialog.SetActive(true);
+        isOpen = false;
+    }
+
+    public void OnClick_SettingsClose()
+    {
+        settingsDialog.SetActive(false);
     }
 
     IEnumerator LoadLevelListMenu()
