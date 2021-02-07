@@ -72,13 +72,21 @@ public class Cat : MonoBehaviour
         _lineRenderer.enabled = true;
         SetLineRendererPositions(transform.position);
     }
+
     private void OnMouseDrag()
     {
-        Vector2 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 targetPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        if (SettingsHelper.PointerDragOffsetEnabled)
+        {
+            targetPoint += new Vector2(0.0f, 1.0f);
+        }
+
+        Debug.Log("Drag Offset: " + SettingsHelper.PointerDragOffsetEnabled);
         //Debug.DrawLine(mouseWorldPos, transform.position);
-        _rigid.AddForce((mouseWorldPos - (Vector2)transform.position) * dragForce, ForceMode2D.Force);
-        SetLineRendererPositions(mouseWorldPos);
+        _rigid.AddForce((targetPoint - (Vector2)transform.position) * dragForce, ForceMode2D.Force);
+        SetLineRendererPositions(targetPoint);
     }
+
     private void OnMouseUp()
     {
         _lineRenderer.enabled = false;
@@ -98,10 +106,17 @@ public class Cat : MonoBehaviour
     }
     void MovedTouchInput(Touch touch)
     {
-        Vector2 touchWorldPos = Camera.main.ScreenToWorldPoint(touch.position);
+        Vector2 targetPoint = Camera.main.ScreenToWorldPoint(touch.position);
+        if (SettingsHelper.PointerDragOffsetEnabled)
+        {
+            targetPoint += new Vector2(0.0f, 1.0f);
+        }
+
+        Debug.Log("Drag Offset: " + SettingsHelper.PointerDragOffsetEnabled);
+
         //Debug.DrawLine(touchWorldPos, transform.position);
-        _rigid.AddForce((touchWorldPos - (Vector2)transform.position) * dragForce, ForceMode2D.Force);
-        SetLineRendererPositions(touchWorldPos);
+        _rigid.AddForce((targetPoint - (Vector2)transform.position) * dragForce, ForceMode2D.Force);
+        SetLineRendererPositions(targetPoint);
     }
     void StationaryTouchInput(Touch touch)
     {
