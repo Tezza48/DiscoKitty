@@ -25,25 +25,34 @@ public class LevelManager : MonoBehaviour
         }
     }
 
-    [System.Serializable]
-    public class LevelData
+    [Serializable]
+    public class LevelEntity
     {
         public Vector3 PositionAndRotation;
         public ObjectType Type;
         public float Radius;
     }
 
-    [System.Serializable]
-    public class LevelDataArray
+    [Serializable]
+    public class CameraInfo
     {
-        public LevelData[] Content;
+        public bool fixedAtCentre;
+        public float min;
+        public float max;
+    }
 
-        public LevelDataArray()
+    [System.Serializable]
+    public class LevelData
+    {
+        public CameraInfo cameraInfo;
+        public LevelEntity[] Content;
+
+        public LevelData()
         {
-            Content = new LevelData[0];
+            Content = new LevelEntity[0];
         }
 
-        public LevelDataArray(LevelData[] data)
+        public LevelData(LevelEntity[] data)
         {
             Content = data;
         }
@@ -80,9 +89,9 @@ public class LevelManager : MonoBehaviour
     {
         Debug.Log("level: " + levelID + " " + levels[levelID]);
         currentLevelID = levelID;
-        LevelDataArray levelData = new LevelDataArray();
+        LevelData levelData = new LevelData();
         TextAsset levelJson = Resources.Load<TextAsset>(levels[currentLevelID]);
-        levelData = JsonUtility.FromJson<LevelDataArray>(levelJson.ToString());
+        levelData = JsonUtility.FromJson<LevelData>(levelJson.ToString());
 
         StartCoroutine(StartNewLevel(levelData.Content));
     }
@@ -99,7 +108,7 @@ public class LevelManager : MonoBehaviour
         LoadLevel(currentLevelID + 1);
     }
 
-    internal IEnumerator StartNewLevel(LevelData[] data)
+    internal IEnumerator StartNewLevel(LevelEntity[] data)
     {
         AsyncOperation load = SceneManager.LoadSceneAsync("GameScene", LoadSceneMode.Single);
             

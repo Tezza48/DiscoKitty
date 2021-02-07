@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class CameraController : MonoBehaviour
@@ -13,6 +14,8 @@ public class CameraController : MonoBehaviour
 
     public Camera mCamera;
 
+    public bool isFixedAtCentre;
+
     // Use this for initialization
     void Start()
     {
@@ -22,34 +25,29 @@ public class CameraController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // find furthest out cat
-        float furthest = 0.0f;
-        foreach (var item in CameraTracked.GetEnabledCameraTracked())
+        var tracked = CameraTracked.GetEnabledCameraTracked();
+
+        if (tracked.Count == 0)
         {
-            if (item.transform.position.magnitude > furthest)
-            {
-                furthest = (int)item.transform.position.magnitude;
-            }
+            return;
         }
+
+        var positions = tracked.Select(x =>
+        {
+            var pos = (Vector2)x.transform.position;
+            return pos;
+        });
+
+        var centre = (isFixedAtCentre) ? Vector2.zero : positions.Aggregate((sum, next) => sum + next) / (tracked.Count);
+
+        transform.position = Vector3.Lerp(transform.position, new Vector3(centre.x, centre.y, transform.position.z), Time.deltaTime);
+
+        var furthest = positions
+            .Select(x => (x - centre).magnitude)
+            .Aggregate((acc, next) => Mathf.Max(acc, next));
 
         furthest = Mathf.Clamp(furthest, min, max);
 
-        //if (furthest < min)
-        //{
-        //    furthest = min;
-        //}
-        //else if (furthest > max)
-        //{
-        //    furthest = max;
-        //}
-
-        // add correct buffer
-        float alpha = furthest / (float)max;
-        //Debug.Log(alpha);
-        /*float buffer = Mathf.Lerp(minBuffer, maxBuffer, alpha);*/
-
-
         mCamera.orthographicSize = Mathf.Lerp(mCamera.orthographicSize, furthest + buffer, Time.deltaTime);
-
     }
 }

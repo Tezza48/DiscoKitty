@@ -1,4 +1,9 @@
 {
+    "cameraInfo": {
+        "fixedAtCentre": true,
+        "min": 3.0,
+        "max": 10.0
+    },
     "Content": [
         {
             "PositionAndRotation": {

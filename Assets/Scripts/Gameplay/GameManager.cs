@@ -120,7 +120,7 @@ public class GameManager : MonoBehaviour
 
     }
 
-    internal void InstantiateLevel(LevelManager.LevelData[] data)
+    internal void InstantiateLevel(LevelManager.LevelEntity[] data)
     {
         // destroy all level object just incase the blank level was saved over
         GameObject[] LevelObjects = GameObject.FindGameObjectsWithTag("LevelContent");

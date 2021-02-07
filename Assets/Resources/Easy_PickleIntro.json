@@ -1,13 +1,18 @@
 {
+    "cameraInfo": {
+        "fixedAtCentre": false,
+        "min": 3.0,
+        "max": 10.0
+    },
     "Content": [
         {
             "PositionAndRotation": {
-                "x": -2.0,
+                "x": 2.0299999713897707,
                 "y": 0.0,
                 "z": 0.0
             },
-            "Type": 1,
-            "Radius": 0.0
+            "Type": 2,
+            "Radius": 1.5
         },
         {
             "PositionAndRotation": {
@@ -20,12 +25,12 @@
         },
         {
             "PositionAndRotation": {
-                "x": 2.0299999713897707,
+                "x": -2.0,
                 "y": 0.0,
                 "z": 0.0
             },
-            "Type": 2,
-            "Radius": 1.5
+            "Type": 1,
+            "Radius": 0.0
         }
     ]
 }

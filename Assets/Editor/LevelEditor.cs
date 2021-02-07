@@ -4,25 +4,12 @@ using System;
 using UnityEngine;
 using UnityEditor;
 using System.IO;
+using LevelEntity = LevelManager.LevelEntity;
 using LevelData = LevelManager.LevelData;
-using LevelDataArray = LevelManager.LevelDataArray;
 using ObjectType = LevelManager.ObjectType;
 
 public class LevelEditor : EditorWindow
 {
-
-
-    //[System.Serializable]
-    //public class LevelListArray
-    //{
-    //    public string[] names;
-
-    //    public LevelListArray()
-    //    {
-    //        names = new string[0];
-    //    }
-    //}
-
     [MenuItem("Window/Level Editor")]
     public static void ShowWindow()
     {
@@ -74,7 +61,7 @@ public class LevelEditor : EditorWindow
 
                 if (createNewFile)
                 {
-                    LevelDataArray data = new LevelDataArray();
+                    LevelData data = new LevelData();
                     string json = EditorJsonUtility.ToJson(data); string finalFile = "Assets/Resources/" + editor_NewFilename + ".json";
 
                     using (FileStream fs = new FileStream(finalFile, FileMode.Create))
@@ -95,11 +82,11 @@ public class LevelEditor : EditorWindow
                 if (editor_doSave)
                 {
                     GameObject[] LevelObjects = GameObject.FindGameObjectsWithTag("LevelContent");
-                    List<LevelData> levelData = new List<LevelData>();            
+                    List<LevelEntity> entities  = new List<LevelEntity>();
 
                     foreach (var item in LevelObjects)
                     {
-                        LevelData itemData = new LevelData();
+                        LevelEntity itemData = new LevelEntity();
                         Zone zone = item.GetComponent<Zone>();
                         Cat cat = item.GetComponent<Cat>();
                         BoxFlattener box = item.GetComponent<BoxFlattener>();
@@ -129,12 +116,22 @@ public class LevelEditor : EditorWindow
                             itemData.PositionAndRotation.z = trans.eulerAngles.z;
                         }
 
-                        levelData.Add(itemData);
+                        entities.Add(itemData);
                     }
 
-                    LevelDataArray levelDataArray = new LevelDataArray(levelData.ToArray());
+                    var camera = FindObjectOfType<CameraController>();
+                    LevelData levelData = new LevelData
+                    {
+                        cameraInfo = new LevelManager.CameraInfo
+                        {
+                            fixedAtCentre = camera.isFixedAtCentre,
+                            min = camera.min,
+                            max = camera.max,
+                        },
+                        Content = entities.ToArray()
+                    };
 
-                    string json = EditorJsonUtility.ToJson(levelDataArray, true);
+                    string json = EditorJsonUtility.ToJson(levelData, true);
 
                     string finalFile = "Assets/Resources/" + editor_LevelFile.name + ".json";
 
@@ -160,7 +157,7 @@ public class LevelEditor : EditorWindow
 
                     //string finalFile = "Assets/Resources/" + fileName;
 
-                    LevelDataArray levelData = new LevelDataArray();
+                    LevelData levelData = new LevelData();
                     TextAsset json = editor_LevelFile;
                     EditorJsonUtility.FromJsonOverwrite(json.ToString(), levelData);
 
@@ -182,6 +179,15 @@ public class LevelEditor : EditorWindow
                             newObject.GetComponent<Zone>().size = item.Radius;
                             newObject.GetComponent<Zone>().SetupZone();
                         }
+                    }
+
+                    // Older levels dont have camera info, check that max is greater than zero because JSON wont return null where info is missing.
+                    if (levelData.cameraInfo.max > 0.0f)
+                    {
+                        var cam = FindObjectOfType<CameraController>();
+                        cam.isFixedAtCentre = levelData.cameraInfo.fixedAtCentre;
+                        cam.min = levelData.cameraInfo.min;
+                        cam.max = levelData.cameraInfo.max;
                     }
                 }
                 #endregion
