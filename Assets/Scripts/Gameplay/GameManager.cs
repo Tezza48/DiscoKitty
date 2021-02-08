@@ -120,36 +120,36 @@ public class GameManager : MonoBehaviour
 
     }
 
-    internal void InstantiateLevel(LevelManager.LevelEntity[] data)
-    {
-        // destroy all level object just incase the blank level was saved over
-        GameObject[] LevelObjects = GameObject.FindGameObjectsWithTag("LevelContent");
+    //internal void InstantiateLevel(LevelManager.LevelEntity[] data)
+    //{
+    //    // destroy all level object just incase the blank level was saved over
+    //    GameObject[] LevelObjects = GameObject.FindGameObjectsWithTag("LevelContent");
 
-        foreach (var item in LevelObjects)
-        {
-            DestroyImmediate(item);
-        }
+    //    foreach (var item in LevelObjects)
+    //    {
+    //        DestroyImmediate(item);
+    //    }
 
-        foreach (var item in data)
-        {
-            GameObject newObject;
+    //    foreach (var item in data)
+    //    {
+    //        GameObject newObject;
 
-            Vector2 pos = item.PositionAndRotation;
-            float rotation = item.PositionAndRotation.z;
-            Quaternion rot = Quaternion.Euler(0.0f, 0.0f, rotation);
-            newObject = GetComponent<LevelDataPrefabs>().Prefabs[(int)item.Type];
+    //        Vector2 pos = item.PositionAndRotation;
+    //        float rotation = item.PositionAndRotation.z;
+    //        Quaternion rot = Quaternion.Euler(0.0f, 0.0f, rotation);
+    //        newObject = GetComponent<LevelDataPrefabs>().Prefabs[(int)item.Type];
 
-            newObject = Instantiate(newObject, pos, rot);
+    //        newObject = Instantiate(newObject, pos, rot);
 
-            if (item.Type == LevelManager.ObjectType.Zone)
-            {
-                newObject.GetComponent<Zone>().size = item.Radius;
-                newObject.GetComponent<Zone>().SetupZone();
-            }
-        }
-        zones = FindObjectsOfType<Zone>();
-        cats = FindObjectsOfType<Cat>();
-    }
+    //        if (item.Type == LevelManager.ObjectType.Zone)
+    //        {
+    //            newObject.GetComponent<Zone>().size = item.Radius;
+    //            newObject.GetComponent<Zone>().SetupZone();
+    //        }
+    //    }
+    //    zones = FindObjectsOfType<Zone>();
+    //    cats = FindObjectsOfType<Cat>();
+    //}
 
     // Update is called once per frame
     void Update()
@@ -332,5 +332,6 @@ public class GameManager : MonoBehaviour
 
     public void LogFirstCatTouch()
     {
+
     }
 }

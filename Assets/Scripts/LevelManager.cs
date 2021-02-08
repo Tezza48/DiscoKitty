@@ -77,23 +77,13 @@ public class LevelManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
-        // Load level list from json file
-        LevelList levelList = new LevelList();
-        TextAsset levelsJson = Resources.Load<TextAsset>("levels");
-        JsonUtility.FromJsonOverwrite(levelsJson.ToString(), levelList);
-        levels = levelList.Levels;
     }
 
     internal void LoadLevel(int levelID)
     {
         Debug.Log("level: " + levelID + " " + levels[levelID]);
-        currentLevelID = levelID;
-        LevelData levelData = new LevelData();
-        TextAsset levelJson = Resources.Load<TextAsset>(levels[currentLevelID]);
-        levelData = JsonUtility.FromJson<LevelData>(levelJson.ToString());
 
-        StartCoroutine(StartNewLevel(levelData.Content));
+        SceneManager.LoadScene(SceneManager.GetSceneByPath(levels[levelID]).buildIndex);
     }
 
     //internal int GetIDfromName()
@@ -106,14 +96,5 @@ public class LevelManager : MonoBehaviour
             return;
         }
         LoadLevel(currentLevelID + 1);
-    }
-
-    internal IEnumerator StartNewLevel(LevelEntity[] data)
-    {
-        AsyncOperation load = SceneManager.LoadSceneAsync("GameScene", LoadSceneMode.Single);
-            
-        yield return new WaitUntil(() => load.isDone);
-
-        FindObjectOfType<GameManager>().InstantiateLevel(data);
     }
 }
