@@ -51,6 +51,6 @@ public class UI_LevelButton : MonoBehaviour {
 
     public void OnClick()
     {
-        LevelManager.Singleton.LoadLevel(levelID);
+        LevelManager.Instance.LoadLevel(levelID);
     }
 }

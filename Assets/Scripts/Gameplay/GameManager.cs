@@ -102,6 +102,7 @@ public class GameManager : MonoBehaviour
 
         // Get referance to win screen on the UI
         UI_WinPanel = GameObject.Find("Win Panel");
+
         // Setup event to fire when the player clicks next level
         // commented out, not sure why i needed this, loadnext level is easy enough to plug right in
         //UI_WinPanel.transform.GetChild(1).GetComponent<Button>().onClick.AddListener(LoadNextLevel);
@@ -119,37 +120,6 @@ public class GameManager : MonoBehaviour
         levelStartTime = Time.time;
 
     }
-
-    //internal void InstantiateLevel(LevelManager.LevelEntity[] data)
-    //{
-    //    // destroy all level object just incase the blank level was saved over
-    //    GameObject[] LevelObjects = GameObject.FindGameObjectsWithTag("LevelContent");
-
-    //    foreach (var item in LevelObjects)
-    //    {
-    //        DestroyImmediate(item);
-    //    }
-
-    //    foreach (var item in data)
-    //    {
-    //        GameObject newObject;
-
-    //        Vector2 pos = item.PositionAndRotation;
-    //        float rotation = item.PositionAndRotation.z;
-    //        Quaternion rot = Quaternion.Euler(0.0f, 0.0f, rotation);
-    //        newObject = GetComponent<LevelDataPrefabs>().Prefabs[(int)item.Type];
-
-    //        newObject = Instantiate(newObject, pos, rot);
-
-    //        if (item.Type == LevelManager.ObjectType.Zone)
-    //        {
-    //            newObject.GetComponent<Zone>().size = item.Radius;
-    //            newObject.GetComponent<Zone>().SetupZone();
-    //        }
-    //    }
-    //    zones = FindObjectsOfType<Zone>();
-    //    cats = FindObjectsOfType<Cat>();
-    //}
 
     // Update is called once per frame
     void Update()
@@ -217,42 +187,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    //public void SetLevel(string name, bool clear = false)
-    //{
-    //    if (clear)
-    //    {
-    //        GameObject[] LevelObjects = GameObject.FindGameObjectsWithTag("LevelContent");
-    //
-    //        foreach (var item in LevelObjects)
-    //        {
-    //            DestroyImmediate(item);
-    //        }
-    //    }
-    //
-    //    LevelDataArray levelData = new LevelDataArray();
-    //    TextAsset json = Resources.Load<TextAsset>(name);
-    //    JsonUtility.FromJsonOverwrite(json.ToString(), levelData);
-    //
-    //    LevelDataPrefabs dataPrefabs = GetComponent<LevelDataPrefabs>();
-    //
-    //    foreach (var item in levelData.Content)
-    //    {
-    //        GameObject newObject;
-    //
-    //        Vector2 pos = item.PositionAndRotation;
-    //        float rotation = item.PositionAndRotation.z;
-    //        Quaternion rot = Quaternion.Euler(0.0f, 0.0f, rotation);
-    //        newObject = dataPrefabs.Prefabs[(int)item.Type];
-    //
-    //        newObject = Instantiate(newObject, pos, rot);
-    //
-    //        if (item.Type == ObjectType.Zone)
-    //        {
-    //            newObject.GetComponent<Zone>().size = item.Radius;
-    //        }
-    //    }
-    //}
-
     private void LevelComplete()
     {
         //mWinRepulsive.enabled = true;
@@ -267,7 +201,7 @@ public class GameManager : MonoBehaviour
             mAudio.Play();
         }
         
-        string levelName = LevelManager.Singleton.levels[LevelManager.Singleton.currentLevelID];
+        string levelName = LevelManager.Instance.levels[LevelManager.Instance.currentLevelID];
         float playTime = Time.time - levelStartTime;
 
         GameSaveData data = GameData.LoadData();
@@ -321,13 +255,13 @@ public class GameManager : MonoBehaviour
 
     public void ResetLevel()
     {
-        LevelManager.Singleton.LoadLevel(LevelManager.Singleton.currentLevelID);
+        LevelManager.Instance.LoadLevel(LevelManager.Instance.currentLevelID);
     }
 
     public void LoadNextLevel()
     {
         //Debug.Log("Trying to load next level");
-        LevelManager.Singleton.LoadNextLevel();
+        LevelManager.Instance.LoadNextLevel();
     }
 
     public void LogFirstCatTouch()

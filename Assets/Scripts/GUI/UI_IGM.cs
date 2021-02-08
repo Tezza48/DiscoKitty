@@ -34,7 +34,7 @@ public class UI_IGM : MonoBehaviour
 
     public void ResetLevel ()
     {
-        LevelManager.Singleton.LoadLevel(LevelManager.Singleton.currentLevelID);
+        LevelManager.Instance.LoadLevel(LevelManager.Instance.currentLevelID);
     }
 
     public void LoadMainMenu()

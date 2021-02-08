@@ -8,11 +8,9 @@ using UnityEngine;
 [CustomEditor(typeof(LevelManager))]
 public class LevelManagerEditor : Editor
 {
-    SceneAsset[] scenes;
     SerializedProperty levelsProperty;
 
     bool scenesFoldOut = true;
-    bool scenesListFoldOut = true;
 
     private void OnEnable()
     {
@@ -28,12 +26,13 @@ public class LevelManagerEditor : Editor
         EditorGUI.indentLevel++;
         var numScenes = EditorGUILayout.IntField("Size", levelsProperty.arraySize);
         levelsProperty.arraySize = numScenes;
-        Array.Resize(ref scenes, numScenes);
+
 
         for (int i = 0; i < levelsProperty.arraySize; i++)
         {
-            scenes[i] = (SceneAsset)EditorGUILayout.ObjectField("Element " + i, scenes[i], typeof(SceneAsset), true);
-            levelsProperty.GetArrayElementAtIndex(i).stringValue = AssetDatabase.GetAssetPath(scenes[i]);
+            var scene = AssetDatabase.LoadAssetAtPath<SceneAsset>(levelsProperty.GetArrayElementAtIndex(i).stringValue);
+            scene = (SceneAsset)EditorGUILayout.ObjectField("Element " + i, scene, typeof(SceneAsset), true);
+            levelsProperty.GetArrayElementAtIndex(i).stringValue = AssetDatabase.GetAssetPath(scene);
         }
 
         EditorGUI.indentLevel--;
