@@ -31,7 +31,7 @@ public class LevelManager : MonoBehaviour
         Debug.Log("level: " + levelID + " " + levels[levelID]);
 
         // TODO WT: fix this. (errors when loading level from menu).
-        SceneManager.LoadScene(SceneManager.GetSceneByPath(levels[levelID]).buildIndex);
+        SceneManager.LoadScene(levels[levelID]);
     }
 
     internal void LoadNextLevel()

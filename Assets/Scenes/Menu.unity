@@ -544,102 +544,102 @@ PrefabInstance:
     - target: {fileID: 114743283627186942, guid: e620badded7186844a09c1e6770114fb,
         type: 3}
       propertyPath: levels.Array.data[0]
-      value: Assets/Scenes/Levels/Trivial_2Cats1Circle.unity
+      value: Scenes/Levels/Trivial_2Cats1Circle
       objectReference: {fileID: 0}
     - target: {fileID: 114743283627186942, guid: e620badded7186844a09c1e6770114fb,
         type: 3}
       propertyPath: levels.Array.data[1]
-      value: Assets/Scenes/Levels/Trivial_1Cat1Circle1Box.unity
+      value: Scenes/Levels/Trivial_1Cat1Circle1Box
       objectReference: {fileID: 0}
     - target: {fileID: 114743283627186942, guid: e620badded7186844a09c1e6770114fb,
         type: 3}
       propertyPath: levels.Array.data[2]
-      value: Assets/Scenes/Levels/Trivial_1Cat1Pickle.unity
+      value: Scenes/Levels/Trivial_1Cat1Pickle
       objectReference: {fileID: 0}
     - target: {fileID: 114743283627186942, guid: e620badded7186844a09c1e6770114fb,
         type: 3}
       propertyPath: levels.Array.data[3]
-      value: Assets/Scenes/Levels/Trivial_1Cat1SmallCircle.unity
+      value: Scenes/Levels/Trivial_1Cat1SmallCircle
       objectReference: {fileID: 0}
     - target: {fileID: 114743283627186942, guid: e620badded7186844a09c1e6770114fb,
         type: 3}
       propertyPath: levels.Array.data[4]
-      value: Assets/Scenes/Levels/Trivial_2Cats1Circle.unity
+      value: Scenes/Levels/Trivial_2Cats1Circle
       objectReference: {fileID: 0}
     - target: {fileID: 114743283627186942, guid: e620badded7186844a09c1e6770114fb,
         type: 3}
       propertyPath: levels.Array.data[5]
-      value: Assets/Scenes/Levels/Easy_1Cat1Circle1Pickle1Box.unity
+      value: Scenes/Levels/Easy_1Cat1Circle1Pickle1Box
       objectReference: {fileID: 0}
     - target: {fileID: 114743283627186942, guid: e620badded7186844a09c1e6770114fb,
         type: 3}
       propertyPath: levels.Array.data[6]
-      value: Assets/Scenes/Levels/Easy_2Cats2Circles.unity
+      value: Scenes/Levels/Easy_2Cats2Circles
       objectReference: {fileID: 0}
     - target: {fileID: 114743283627186942, guid: e620badded7186844a09c1e6770114fb,
         type: 3}
       propertyPath: levels.Array.data[7]
-      value: Assets/Scenes/Levels/Medium_2Cats1Pickle.unity
+      value: Scenes/Levels/Medium_2Cats1Pickle
       objectReference: {fileID: 0}
     - target: {fileID: 114743283627186942, guid: e620badded7186844a09c1e6770114fb,
         type: 3}
       propertyPath: levels.Array.data[8]
-      value: Assets/Scenes/Levels/Medium_2Cats2Circles.unity
+      value: Scenes/Levels/Medium_2Cats2Circles
       objectReference: {fileID: 0}
     - target: {fileID: 114743283627186942, guid: e620badded7186844a09c1e6770114fb,
         type: 3}
       propertyPath: levels.Array.data[9]
-      value: Assets/Scenes/Levels/Medium_2Cats2Circles1Pickle.unity
+      value: Scenes/Levels/Medium_2Cats2Circles1Pickle
       objectReference: {fileID: 0}
     - target: {fileID: 114743283627186942, guid: e620badded7186844a09c1e6770114fb,
         type: 3}
       propertyPath: levels.Array.data[10]
-      value: Assets/Scenes/Levels/Medium_3Cats1BigCircle.unity
+      value: Scenes/Levels/Medium_3Cats1BigCircle
       objectReference: {fileID: 0}
     - target: {fileID: 114743283627186942, guid: e620badded7186844a09c1e6770114fb,
         type: 3}
       propertyPath: levels.Array.data[11]
-      value: Assets/Scenes/Levels/Medium_3Cats2DifferentCircles.unity
+      value: Scenes/Levels/Medium_3Cats2DifferentCircles
       objectReference: {fileID: 0}
     - target: {fileID: 114743283627186942, guid: e620badded7186844a09c1e6770114fb,
         type: 3}
       propertyPath: levels.Array.data[12]
-      value: Assets/Scenes/Levels/Medium_3Cats2DifferentCircles_2.unity
+      value: Scenes/Levels/Medium_3Cats2DifferentCircles_2
       objectReference: {fileID: 0}
     - target: {fileID: 114743283627186942, guid: e620badded7186844a09c1e6770114fb,
         type: 3}
       propertyPath: levels.Array.data[13]
-      value: Assets/Scenes/Levels/Medium_4Cats2Circles.unity
+      value: Scenes/Levels/Medium_4Cats2Circles
       objectReference: {fileID: 0}
     - target: {fileID: 114743283627186942, guid: e620badded7186844a09c1e6770114fb,
         type: 3}
       propertyPath: levels.Array.data[14]
-      value: Assets/Scenes/Levels/Hard_2Cats_2Circles2Pickles.unity
+      value: Scenes/Levels/Hard_2Cats_2Circles2Pickles
       objectReference: {fileID: 0}
     - target: {fileID: 114743283627186942, guid: e620badded7186844a09c1e6770114fb,
         type: 3}
       propertyPath: levels.Array.data[15]
-      value: Assets/Scenes/Levels/Hard_3Cats1SmallCircle.unity
+      value: Scenes/Levels/Hard_3Cats1SmallCircle
       objectReference: {fileID: 0}
     - target: {fileID: 114743283627186942, guid: e620badded7186844a09c1e6770114fb,
         type: 3}
       propertyPath: levels.Array.data[16]
-      value: Assets/Scenes/Levels/Hard_3Cats3Circles1Pickle.unity
+      value: Scenes/Levels/Hard_3Cats3Circles1Pickle
       objectReference: {fileID: 0}
     - target: {fileID: 114743283627186942, guid: e620badded7186844a09c1e6770114fb,
         type: 3}
       propertyPath: levels.Array.data[17]
-      value: Assets/Scenes/Levels/Hard_3CatsPickleDick.unity
+      value: Scenes/Levels/Hard_3CatsPickleDick
       objectReference: {fileID: 0}
     - target: {fileID: 114743283627186942, guid: e620badded7186844a09c1e6770114fb,
         type: 3}
       propertyPath: levels.Array.data[18]
-      value: Assets/Scenes/Levels/Hard_4Cats1Circle.unity
+      value: Scenes/Levels/Hard_4Cats1Circle
       objectReference: {fileID: 0}
     - target: {fileID: 114743283627186942, guid: e620badded7186844a09c1e6770114fb,
         type: 3}
       propertyPath: levels.Array.data[19]
-      value: Assets/Scenes/Levels/Hard_9Cats1Circle.unity
+      value: Scenes/Levels/Hard_9Cats1Circle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e620badded7186844a09c1e6770114fb, type: 3}

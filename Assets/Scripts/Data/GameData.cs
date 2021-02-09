@@ -98,7 +98,7 @@ class GameSaveData
 
     public GameSaveData()
     {
-        highestLevel = 0;
+        highestLevel = -1;
         levelData = new Dictionary<string, LevelSaveData>();
     }
 

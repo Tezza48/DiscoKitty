@@ -10,7 +10,7 @@ public class LevelManagerEditor : Editor
 {
     SerializedProperty levelsProperty;
 
-    bool scenesFoldOut = true;
+    bool scenesFoldOut;
 
     private void OnEnable()
     {
@@ -27,12 +27,14 @@ public class LevelManagerEditor : Editor
         var numScenes = EditorGUILayout.IntField("Size", levelsProperty.arraySize);
         levelsProperty.arraySize = numScenes;
 
-
+        // TODO WT: Also have "Assets/" trimmed from the start.
+        var start = "Assets/";
+        var ext = ".unity";
         for (int i = 0; i < levelsProperty.arraySize; i++)
         {
-            var scene = AssetDatabase.LoadAssetAtPath<SceneAsset>(levelsProperty.GetArrayElementAtIndex(i).stringValue);
+            var scene = AssetDatabase.LoadAssetAtPath<SceneAsset>(start + levelsProperty.GetArrayElementAtIndex(i).stringValue + ext);
             scene = (SceneAsset)EditorGUILayout.ObjectField("Element " + i, scene, typeof(SceneAsset), true);
-            levelsProperty.GetArrayElementAtIndex(i).stringValue = AssetDatabase.GetAssetPath(scene);
+            levelsProperty.GetArrayElementAtIndex(i).stringValue = AssetDatabase.GetAssetPath(scene).TrimStart(start.ToCharArray()).TrimEnd(ext.ToCharArray());
         }
 
         EditorGUI.indentLevel--;
