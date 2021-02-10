@@ -5,8 +5,8 @@ using UnityEditor;
 using UnityEditorInternal;
 using UnityEngine;
 
-[CustomEditor(typeof(LevelManager))]
-public class LevelManagerEditor : Editor
+[CustomEditor(typeof(LevelList))]
+public class LevelListEditor : Editor
 {
     SerializedProperty levelsProperty;
 
@@ -20,9 +20,8 @@ public class LevelManagerEditor : Editor
     public override void OnInspectorGUI()
     {
         serializedObject.Update();
-        EditorGUILayout.ObjectField("Script:", MonoScript.FromMonoBehaviour((LevelManager)target), typeof(LevelManager), false);
-
         scenesFoldOut = EditorGUILayout.BeginFoldoutHeaderGroup(scenesFoldOut, "Levels");
+
         EditorGUI.indentLevel++;
         var numScenes = EditorGUILayout.IntField("Size", levelsProperty.arraySize);
         levelsProperty.arraySize = numScenes;
@@ -42,8 +41,8 @@ public class LevelManagerEditor : Editor
 
         EditorGUILayout.Space();
 
-        EditorGUILayout.LabelField("Debug Levels list");
-        EditorGUILayout.PropertyField(levelsProperty);
+        //EditorGUILayout.LabelField("Debug Levels list");
+        //EditorGUILayout.PropertyField(levelsProperty);
 
 
         serializedObject.ApplyModifiedProperties();

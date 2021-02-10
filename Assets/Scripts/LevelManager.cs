@@ -9,7 +9,7 @@ public class LevelManager : MonoBehaviour
     static LevelManager instance;
 
     public int currentLevelID;
-    public string[] levels;
+    public LevelList levels;
 
     public static LevelManager Instance { get => instance; }
 
@@ -28,15 +28,16 @@ public class LevelManager : MonoBehaviour
 
     internal void LoadLevel(int levelID)
     {
-        Debug.Log("level: " + levelID + " " + levels[levelID]);
+        currentLevelID = levelID;
+        Debug.Log("level: " + levelID + " " + levels.levels[levelID]);
 
         // TODO WT: fix this. (errors when loading level from menu).
-        SceneManager.LoadScene(levels[levelID]);
+        SceneManager.LoadScene(levels.levels[levelID]);
     }
 
     internal void LoadNextLevel()
     {
-        if (currentLevelID+1 == levels.Length)
+        if (currentLevelID+1 == levels.levels.Length)
         {
             // dont do anything if there isnt a next level
             return;

@@ -201,7 +201,7 @@ public class GameManager : MonoBehaviour
             mAudio.Play();
         }
         
-        string levelName = LevelManager.Instance.levels[LevelManager.Instance.currentLevelID];
+        string levelName = LevelManager.Instance.levels.levels[LevelManager.Instance.currentLevelID];
         float playTime = Time.time - levelStartTime;
 
         GameSaveData data = GameData.LoadData();

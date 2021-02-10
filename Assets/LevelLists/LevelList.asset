@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1be74e3ec80821243bd45de9cbf5d43b, type: 3}
+  m_Name: LevelList
+  m_EditorClassIdentifier: 
+  levels:
+  - Scenes/Levels/Trivial_1Cat1Circle
+  - Scenes/Levels/Trivial_1Cat1Circle1Box
+  - Scenes/Levels/Trivial_1Cat1Pickle
+  - Scenes/Levels/Trivial_1Cat1SmallCircle
+  - Scenes/Levels/Trivial_2Cats1Circle
+  - Scenes/Levels/Easy_1Cat1Circle1Pickle1Box
+  - Scenes/Levels/Easy_2Cats2Circles
+  - Scenes/Levels/Medium_2Cats1Pickle
+  - Scenes/Levels/Medium_2Cats2Circles
+  - Scenes/Levels/Medium_2Cats2Circles1Pickle
+  - Scenes/Levels/Medium_3Cats1BigCircle
+  - Scenes/Levels/Medium_3Cats2DifferentCircles
+  - Scenes/Levels/Medium_3Cats2DifferentCircles_2
+  - Scenes/Levels/Medium_4Cats2Circles
+  - Scenes/Levels/Hard_2Cats_2Circles2Pickles
+  - Scenes/Levels/Hard_3Cats1SmallCircle
+  - Scenes/Levels/Hard_3Cats3Circles1Pickle
+  - Scenes/Levels/Hard_3CatsPickleDick
+  - Scenes/Levels/Hard_4Cats1Circle
+  - Scenes/Levels/Hard_9Cats1Circle
