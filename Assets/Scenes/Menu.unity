@@ -500,6 +500,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1895568663211244, guid: e620badded7186844a09c1e6770114fb, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4253035579895506, guid: e620badded7186844a09c1e6770114fb, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -531,6 +535,117 @@ PrefabInstance:
     - target: {fileID: 4253035579895506, guid: e620badded7186844a09c1e6770114fb, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114743283627186942, guid: e620badded7186844a09c1e6770114fb,
+        type: 3}
+      propertyPath: levels
+      value: 
+      objectReference: {fileID: 11400000, guid: 9d602b69cb6517f469fa1907564b444f,
+        type: 2}
+    - target: {fileID: 114743283627186942, guid: e620badded7186844a09c1e6770114fb,
+        type: 3}
+      propertyPath: levels.Array.size
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 114743283627186942, guid: e620badded7186844a09c1e6770114fb,
+        type: 3}
+      propertyPath: levels.Array.data[0]
+      value: Scenes/Levels/Trivial_2Cats1Circle
+      objectReference: {fileID: 0}
+    - target: {fileID: 114743283627186942, guid: e620badded7186844a09c1e6770114fb,
+        type: 3}
+      propertyPath: levels.Array.data[1]
+      value: Scenes/Levels/Trivial_1Cat1Circle1Box
+      objectReference: {fileID: 0}
+    - target: {fileID: 114743283627186942, guid: e620badded7186844a09c1e6770114fb,
+        type: 3}
+      propertyPath: levels.Array.data[2]
+      value: Scenes/Levels/Trivial_1Cat1Pickle
+      objectReference: {fileID: 0}
+    - target: {fileID: 114743283627186942, guid: e620badded7186844a09c1e6770114fb,
+        type: 3}
+      propertyPath: levels.Array.data[3]
+      value: Scenes/Levels/Trivial_1Cat1SmallCircle
+      objectReference: {fileID: 0}
+    - target: {fileID: 114743283627186942, guid: e620badded7186844a09c1e6770114fb,
+        type: 3}
+      propertyPath: levels.Array.data[4]
+      value: Scenes/Levels/Trivial_2Cats1Circle
+      objectReference: {fileID: 0}
+    - target: {fileID: 114743283627186942, guid: e620badded7186844a09c1e6770114fb,
+        type: 3}
+      propertyPath: levels.Array.data[5]
+      value: Scenes/Levels/Easy_1Cat1Circle1Pickle1Box
+      objectReference: {fileID: 0}
+    - target: {fileID: 114743283627186942, guid: e620badded7186844a09c1e6770114fb,
+        type: 3}
+      propertyPath: levels.Array.data[6]
+      value: Scenes/Levels/Easy_2Cats2Circles
+      objectReference: {fileID: 0}
+    - target: {fileID: 114743283627186942, guid: e620badded7186844a09c1e6770114fb,
+        type: 3}
+      propertyPath: levels.Array.data[7]
+      value: Scenes/Levels/Medium_2Cats1Pickle
+      objectReference: {fileID: 0}
+    - target: {fileID: 114743283627186942, guid: e620badded7186844a09c1e6770114fb,
+        type: 3}
+      propertyPath: levels.Array.data[8]
+      value: Scenes/Levels/Medium_2Cats2Circles
+      objectReference: {fileID: 0}
+    - target: {fileID: 114743283627186942, guid: e620badded7186844a09c1e6770114fb,
+        type: 3}
+      propertyPath: levels.Array.data[9]
+      value: Scenes/Levels/Medium_2Cats2Circles1Pickle
+      objectReference: {fileID: 0}
+    - target: {fileID: 114743283627186942, guid: e620badded7186844a09c1e6770114fb,
+        type: 3}
+      propertyPath: levels.Array.data[10]
+      value: Scenes/Levels/Medium_3Cats1BigCircle
+      objectReference: {fileID: 0}
+    - target: {fileID: 114743283627186942, guid: e620badded7186844a09c1e6770114fb,
+        type: 3}
+      propertyPath: levels.Array.data[11]
+      value: Scenes/Levels/Medium_3Cats2DifferentCircles
+      objectReference: {fileID: 0}
+    - target: {fileID: 114743283627186942, guid: e620badded7186844a09c1e6770114fb,
+        type: 3}
+      propertyPath: levels.Array.data[12]
+      value: Scenes/Levels/Medium_3Cats2DifferentCircles_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114743283627186942, guid: e620badded7186844a09c1e6770114fb,
+        type: 3}
+      propertyPath: levels.Array.data[13]
+      value: Scenes/Levels/Medium_4Cats2Circles
+      objectReference: {fileID: 0}
+    - target: {fileID: 114743283627186942, guid: e620badded7186844a09c1e6770114fb,
+        type: 3}
+      propertyPath: levels.Array.data[14]
+      value: Scenes/Levels/Hard_2Cats_2Circles2Pickles
+      objectReference: {fileID: 0}
+    - target: {fileID: 114743283627186942, guid: e620badded7186844a09c1e6770114fb,
+        type: 3}
+      propertyPath: levels.Array.data[15]
+      value: Scenes/Levels/Hard_3Cats1SmallCircle
+      objectReference: {fileID: 0}
+    - target: {fileID: 114743283627186942, guid: e620badded7186844a09c1e6770114fb,
+        type: 3}
+      propertyPath: levels.Array.data[16]
+      value: Scenes/Levels/Hard_3Cats3Circles1Pickle
+      objectReference: {fileID: 0}
+    - target: {fileID: 114743283627186942, guid: e620badded7186844a09c1e6770114fb,
+        type: 3}
+      propertyPath: levels.Array.data[17]
+      value: Scenes/Levels/Hard_3CatsPickleDick
+      objectReference: {fileID: 0}
+    - target: {fileID: 114743283627186942, guid: e620badded7186844a09c1e6770114fb,
+        type: 3}
+      propertyPath: levels.Array.data[18]
+      value: Scenes/Levels/Hard_4Cats1Circle
+      objectReference: {fileID: 0}
+    - target: {fileID: 114743283627186942, guid: e620badded7186844a09c1e6770114fb,
+        type: 3}
+      propertyPath: levels.Array.data[19]
+      value: Scenes/Levels/Hard_9Cats1Circle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e620badded7186844a09c1e6770114fb, type: 3}
@@ -802,6 +917,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1172841281}
     m_Modifications:
+    - target: {fileID: 2911166212849787960, guid: 72847d36dadc0e847b4ea6c08afa6c0e,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2911166212849787960, guid: 72847d36dadc0e847b4ea6c08afa6c0e,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2911166212849787960, guid: 72847d36dadc0e847b4ea6c08afa6c0e,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2911166212849787960, guid: 72847d36dadc0e847b4ea6c08afa6c0e,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2911166213875248853, guid: 72847d36dadc0e847b4ea6c08afa6c0e,
         type: 3}
       propertyPath: m_Name

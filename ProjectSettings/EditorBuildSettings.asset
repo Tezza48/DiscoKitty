@@ -8,6 +8,67 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: 8ccd5916e6fbb0647bf2c72222e717d3
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/GameScene.unity
     guid: 2bd4fbd2dfe40d24d897466d7d3614e6
+  - enabled: 1
+    path: Assets/Scenes/Levels/Easy_1Cat1Circle1Pickle1Box.unity
+    guid: 1b87b6a08fd91324dbee86a680141a7a
+  - enabled: 1
+    path: Assets/Scenes/Levels/Easy_2Cats2Circles.unity
+    guid: 1f564b8a741688243af8a07453b7ad27
+  - enabled: 1
+    path: Assets/Scenes/Levels/Hard_2Cats_2Circles2Pickles.unity
+    guid: 83d743eb5464a8f4a9076d4a4aa3afb9
+  - enabled: 1
+    path: Assets/Scenes/Levels/Hard_3Cats1SmallCircle.unity
+    guid: 284ee883e486efa4792f7d4db379d800
+  - enabled: 1
+    path: Assets/Scenes/Levels/Hard_3Cats3Circles1Pickle.unity
+    guid: d10e59d2c19f24c4a9c656642e50d91e
+  - enabled: 1
+    path: Assets/Scenes/Levels/Hard_3CatsPickleDick.unity
+    guid: 3cfe1b1b1470462428ad888bc51b0786
+  - enabled: 1
+    path: Assets/Scenes/Levels/Hard_4Cats1Circle.unity
+    guid: f6b0b1fac5033144685f56d729bb6f5c
+  - enabled: 1
+    path: Assets/Scenes/Levels/Hard_9Cats1Circle.unity
+    guid: 03b15acf24a51a64d8edf678e425ad59
+  - enabled: 1
+    path: Assets/Scenes/Levels/Medium_2Cats1Pickle.unity
+    guid: 97fe728a8e7e1e94689c179c94c5d2a5
+  - enabled: 1
+    path: Assets/Scenes/Levels/Medium_2Cats2Circles.unity
+    guid: 71678d515a4643f429472eb527b8692e
+  - enabled: 1
+    path: Assets/Scenes/Levels/Medium_2Cats2Circles1Pickle.unity
+    guid: 9df65a1eab6dbfa40a3f710d18350ca7
+  - enabled: 1
+    path: Assets/Scenes/Levels/Medium_3Cats1BigCircle.unity
+    guid: 997c602c100ce6e47b28c94f7fd1a527
+  - enabled: 1
+    path: Assets/Scenes/Levels/Medium_3Cats2DifferentCircles.unity
+    guid: 758ecd4ccfdec454eb5c02d0b7cac387
+  - enabled: 1
+    path: Assets/Scenes/Levels/Medium_3Cats2DifferentCircles_2.unity
+    guid: a1f8ba2bdd0d83a498ab6b3ac1832c13
+  - enabled: 1
+    path: Assets/Scenes/Levels/Medium_4Cats2Circles.unity
+    guid: e0ca336b10fc8324f823d1cf244f79cc
+  - enabled: 1
+    path: Assets/Scenes/Levels/Trivial_1Cat1Circle.unity
+    guid: 53dc5e4e2b271a942a08b0de91850f6a
+  - enabled: 1
+    path: Assets/Scenes/Levels/Trivial_1Cat1Circle1Box.unity
+    guid: af19fe6acbe97824c83fbc5bf6c48a21
+  - enabled: 1
+    path: Assets/Scenes/Levels/Trivial_1Cat1Pickle.unity
+    guid: a9650503aeda1444bb0e32805d7a17d9
+  - enabled: 1
+    path: Assets/Scenes/Levels/Trivial_1Cat1SmallCircle.unity
+    guid: 7391b635ea0e44d4ea25451c0b5334ab
+  - enabled: 1
+    path: Assets/Scenes/Levels/Trivial_2Cats1Circle.unity
+    guid: c5462d64f3314244ea10ab815c156b58
+  m_configObjects: {}

@@ -59,11 +59,11 @@ SpriteAtlas:
       m_ForceMaximumCompressionQuality_BC6H_BC7: 0
     packingSettings:
       serializedVersion: 2
-      padding: 8
+      padding: 2
       blockOffset: 1
       allowAlphaSplitting: 0
       enableRotation: 1
-      enableTightPacking: 1
+      enableTightPacking: 0
     variantMultiplier: 1
     packables:
     - {fileID: 2800000, guid: a312b00a37c63bd4cb5727b02d0738bb, type: 3}
@@ -135,6 +135,7 @@ SpriteAtlas:
   - {fileID: 21300006, guid: 4786071ff36c7314da0f3039bedbcf46, type: 3}
   - {fileID: 21300002, guid: 4786071ff36c7314da0f3039bedbcf46, type: 3}
   - {fileID: 21300012, guid: 4786071ff36c7314da0f3039bedbcf46, type: 3}
+  - {fileID: -4159041536883596412, guid: 4786071ff36c7314da0f3039bedbcf46, type: 3}
   m_PackedSpriteNamesToIndex:
   - title
   - social-icon
@@ -192,5 +193,6 @@ SpriteAtlas:
   - happy-face
   - disco-ball
   - box-cat-in
+  - gameplay-bits_0
   m_Tag: globalAtlas
   m_IsVariant: 0

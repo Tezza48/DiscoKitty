@@ -49,7 +49,7 @@ static class GameData
             data.levelData.Add(name, levelData);
         }
 
-        int levelID = LevelManager.Singleton.currentLevelID;
+        int levelID = LevelManager.Instance.currentLevelID;
 
         //Debug.Log("ID: " + levelID + ", Highest: " + data.highestLevel);
 
@@ -98,7 +98,7 @@ class GameSaveData
 
     public GameSaveData()
     {
-        highestLevel = 0;
+        highestLevel = -1;
         levelData = new Dictionary<string, LevelSaveData>();
     }
 
